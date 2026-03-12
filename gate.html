@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ministry of Truth — Clearance Required</title>
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <style>
+    .gate-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #111 0%, #1a1a1a 40%, #2a1a1a 70%, #5C0E0E 100%);
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .gate-page::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(139,26,26,0.06)" stroke-width="0.5"/></svg>') center/300px repeat;
+    }
+    .gate-card {
+      position: relative;
+      z-index: 2;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 56px 48px;
+      width: 100%;
+      max-width: 440px;
+      text-align: center;
+    }
+    .gate-emblem {
+      width: 72px;
+      height: 72px;
+      background: var(--red);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 28px;
+      box-shadow: 0 0 40px rgba(139,26,26,0.4);
+    }
+    .gate-emblem svg { width: 36px; height: 36px; fill: white; }
+    .gate-card h1 {
+      color: #fff;
+      font-size: 1.6rem;
+      font-family: var(--font-display);
+      margin-bottom: 8px;
+    }
+    .gate-card .gate-sub {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.9rem;
+      margin-bottom: 36px;
+    }
+    .gate-input-wrap {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .gate-input-wrap input {
+      width: 100%;
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1rem;
+      font-family: var(--font-primary);
+      text-align: center;
+      letter-spacing: 0.15em;
+      transition: border-color 0.3s ease;
+    }
+    .gate-input-wrap input::placeholder {
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.05em;
+    }
+    .gate-input-wrap input:focus {
+      outline: none;
+      border-color: var(--red);
+      background: rgba(255,255,255,0.08);
+    }
+    .gate-btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--red);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: var(--font-display);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      letter-spacing: 0.03em;
+    }
+    .gate-btn:hover { background: var(--red-dark); box-shadow: 0 4px 20px rgba(139,26,26,0.4); }
+    .gate-error {
+      color: #ef4444;
+      font-size: 0.85rem;
+      margin-top: 16px;
+      min-height: 1.2em;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+    .gate-error.show { opacity: 1; }
+    .gate-footer {
+      margin-top: 32px;
+      color: rgba(255,255,255,0.2);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    .gate-classified {
+      display: inline-block;
+      padding: 4px 12px;
+      border: 1px solid rgba(139,26,26,0.4);
+      border-radius: 4px;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 480px) {
+      .gate-card { padding: 40px 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="gate-page">
+    <div class="gate-card">
+      <div class="gate-emblem">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="gate-classified">Classified Access</div>
+      <h1>Ministry of Truth</h1>
+      <p class="gate-sub">This platform is restricted to authorized personnel.<br>Enter your clearance code to proceed.</p>
+      <form id="gate-form">
+        <div class="gate-input-wrap">
+          <input type="password" id="gate-password" placeholder="Enter clearance code" autocomplete="off" autofocus>
+        </div>
+        <button type="submit" class="gate-btn">Verify Clearance</button>
+        <div class="gate-error" id="gate-error">Access denied. Incorrect clearance code.</div>
+      </form>
+      <div class="gate-footer">Oceania Department of Information Integrity</div>
+    </div>
+  </div>
+
+  <script>
+    // If already cleared, skip gate
+    if (localStorage.getItem('minitrue_clearance') === 'granted') {
+      window.location.replace('index.html');
+    }
+
+    document.getElementById('gate-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var pw = document.getElementById('gate-password').value;
+      var errEl = document.getElementById('gate-error');
+      var btn = this.querySelector('.gate-btn');
+
+      if (pw === 'Orwell') {
+        errEl.classList.remove('show');
+        btn.textContent = 'Access Granted';
+        btn.style.background = '#16a34a';
+        btn.disabled = true;
+        localStorage.setItem('minitrue_clearance', 'granted');
+        setTimeout(function() { window.location.replace('index.html'); }, 800);
+      } else {
+        errEl.classList.add('show');
+        document.getElementById('gate-password').value = '';
+        document.getElementById('gate-password').focus();
+      }
+    });
+  </script>
+</body>
+</html>

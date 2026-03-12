@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citizen Login — Ministry of Truth</title>
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        Ministry of Truth
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="about.html">About Us</a>
+        <a href="accuracy.html">Commitment to Accuracy</a>
+        <a href="resources.html">Citizen Resources</a>
+        <a href="careers.html">Careers</a>
+        <a href="fcq.html">Corrected Questions</a>
+        <a href="newsroom.html">Newsroom</a>
+        <a href="login.html" class="nav-login active">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="login-page">
+    <div class="login-card">
+      <div class="logo-icon" style="width:44px;height:44px;margin:0 auto 16px;">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <h2>Citizen Portal</h2>
+      <p class="login-sub">Access your Ministry account</p>
+      <form onsubmit="event.preventDefault();">
+        <div class="form-group">
+          <label for="citizen-id">Citizen ID</label>
+          <input type="text" id="citizen-id" placeholder="e.g., 7749-A-0012" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="access-key">Access Key</label>
+          <input type="password" id="access-key" placeholder="Enter your access key">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;margin-top:4px;">Authenticate</button>
+        <a href="#" class="forgot-link">Forgot Memory?</a>
+      </form>
+      <p class="login-notice">Unauthorized access attempts are monitored and recorded.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0;">
+        <span>Reality subject to revision. &copy; 2026 Ministry of Truth, Oceania. <span class="footer-admin-trigger" title="Manager Access" onclick="document.dispatchEvent(new KeyboardEvent('keydown',{key:'M',ctrlKey:true,shiftKey:true}))">&#9881;</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sync-popup"><span class="sync-dot"></span>Your session has been synchronized.<button class="sync-close">&times;</button></div>
+
+  <script src="js/main.js?v=2"></script>
+  <script src="js/admin.js?v=2"></script>
+</body>
+</html>
