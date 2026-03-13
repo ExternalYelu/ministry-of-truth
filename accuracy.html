@@ -6,6 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Commitment to Accuracy — Ministry of Truth</title>
   <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/accuracy.css?v=1">
 </head>
 <body>
 
@@ -28,149 +29,388 @@
     </div>
   </nav>
 
-  <section class="page-header">
-    <div class="container">
+  <!-- ============ HERO ============ -->
+  <section class="ac-hero">
+    <canvas id="acCanvas"></canvas>
+    <div class="ac-hero-inner">
       <div class="hero-badge">Institutional Mandate</div>
       <h1>Our Commitment to Accuracy</h1>
-      <p>Accuracy is not merely a goal — it is the fundamental obligation of a just society.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container text-center">
-      <div class="section-subtitle">Definition</div>
-      <div class="accent-line"></div>
-      <h2>What Is Accuracy?</h2>
-      <div style="max-width:700px;margin:20px auto 0;">
-        <p style="color:var(--gray-500);line-height:1.8;margin-bottom:14px;">Accuracy, as defined by the Ministry, is the state of complete alignment between all publicly available information and the current standards set by the Party. It is not a static condition but a dynamic process of continuous refinement.</p>
-        <p style="color:var(--gray-500);line-height:1.8;margin-bottom:14px;">True accuracy does not mean information never changes — it means information is always correct at the moment of consumption. What was accurate yesterday may require adjustment to remain accurate today.</p>
-        <p style="color:var(--gray-500);line-height:1.8;">This is not contradiction. This is improvement.</p>
+      <p class="ac-hero-sub">Accuracy is not merely a goal — it is the fundamental obligation of a just society. Every correction we make is an act of service. Every record we align is a promise kept.</p>
+      <div class="ac-hero-meta">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> 99.97% Consistency Rating</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Real-Time Monitoring</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Zero Tolerance for Error</span>
       </div>
     </div>
   </section>
 
-  <section class="section section-alt">
-    <div class="container text-center">
-      <div class="section-subtitle">Methodology</div>
-      <div class="accent-line"></div>
-      <h2>The Correction Process</h2>
-      <p class="section-desc">Our five-step methodology ensures every correction is thorough, precise, and seamlessly integrated.</p>
+  <!-- ============ STATS BAR ============ -->
+  <section class="ac-stats">
+    <div class="ac-stats-inner">
+      <div class="ac-stat">
+        <span class="ac-stat-num" data-count="14207">0</span>
+        <span class="ac-stat-label">Records Corrected (Q1)</span>
+      </div>
+      <div class="ac-stat">
+        <span class="ac-stat-num" data-count="99" data-suffix=".97%">0</span>
+        <span class="ac-stat-label">Narrative Consistency</span>
+      </div>
+      <div class="ac-stat">
+        <span class="ac-stat-num" data-count="0">0</span>
+        <span class="ac-stat-label">Errors in Final Output</span>
+      </div>
+      <div class="ac-stat">
+        <span class="ac-stat-num" data-count="5">0</span>
+        <span class="ac-stat-label">Correction Phases</span>
+      </div>
+    </div>
+  </section>
 
-      <div class="process-grid fade-in">
-        <div class="process-step">
-          <div class="step-num">01</div>
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+  <!-- ============ DEFINITION ============ -->
+  <section class="ac-definition">
+    <div class="container">
+      <div class="ac-def-grid fade-in">
+        <div class="ac-def-left">
+          <div class="ac-def-icon">
+            <svg viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="50" r="44" stroke="rgba(139,26,26,0.12)" stroke-width="2"/>
+              <circle cx="50" cy="50" r="32" stroke="rgba(139,26,26,0.08)" stroke-width="1.5" stroke-dasharray="6 4"/>
+              <circle cx="50" cy="50" r="20" stroke="#8B1A1A" stroke-width="2.5"/>
+              <circle cx="50" cy="50" r="6" fill="#8B1A1A"/>
+              <path d="M50 6v10M50 84v10M6 50h10M84 50h10" stroke="rgba(139,26,26,0.2)" stroke-width="1.5"/>
+            </svg>
           </div>
-          <h3>Identify Inconsistency</h3>
-          <p>Our monitoring systems or citizen reports flag potential discrepancies between records and current standards.</p>
+          <div class="ac-def-label">MINISTRY DEFINITION</div>
+          <div class="ac-def-ref">Reference: MOT-DEF-001-R14</div>
         </div>
-        <div class="process-step">
-          <div class="step-num">02</div>
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <div class="ac-def-right">
+          <span class="ac-section-tag">Definition</span>
+          <h2>What Is Accuracy?</h2>
+          <div class="ac-head-line"></div>
+          <p><strong>Accuracy</strong> <em>(noun)</em> — The state of complete alignment between all publicly available information and the current standards set by the Party. It is not a static condition but a dynamic process of continuous refinement.</p>
+          <p>True accuracy does not mean information never changes — it means information is <strong>always correct at the moment of consumption</strong>. What was accurate yesterday may require adjustment to remain accurate today. This is not contradiction. This is improvement.</p>
+          <p>The pursuit of accuracy is, therefore, not the pursuit of a fixed point, but the pursuit of perfect responsiveness — a record that adapts as swiftly and seamlessly as the truth it serves.</p>
+          <div class="ac-def-note">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B1A1A" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span>This definition supersedes all prior definitions. Previous versions have been archived and are no longer applicable.</span>
           </div>
-          <h3>Review Archival Material</h3>
-          <p>Affected records are retrieved and analyzed against current informational standards.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-num">03</div>
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h3>Align with Present Data</h3>
-          <p>Records are adjusted to reflect the most current approved version of events, figures, or statements.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-num">04</div>
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-          </div>
-          <h3>Update Distributed Memory</h3>
-          <p>Corrected information is distributed across all channels, databases, and public records.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-num">05</div>
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/></svg>
-          </div>
-          <h3>Archive Obsolete Version</h3>
-          <p>Previous versions are permanently archived in secure Ministry facilities, inaccessible to the public.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container text-center">
-      <div class="section-subtitle">Technology</div>
-      <div class="accent-line"></div>
-      <h2>Real-Time Monitoring</h2>
-      <p class="section-desc">Our advanced monitoring infrastructure ensures narrative consistency across all information channels.</p>
+  <!-- ============ CORRECTION PROCESS ============ -->
+  <section class="ac-process">
+    <div class="container">
+      <div class="ac-section-head fade-in">
+        <span class="ac-section-tag">Methodology</span>
+        <h2>The Five-Phase Correction Protocol</h2>
+        <div class="ac-head-line"></div>
+        <p class="ac-section-desc">Every correction undertaken by the Ministry follows a rigorous, standardized process that ensures thoroughness, precision, and seamless integration. No step is skipped. No shortcut is taken.</p>
+      </div>
 
-      <div class="monitor-grid fade-in">
-        <div class="monitor-card">
-          <div class="monitor-icon">
-            <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      <div class="ac-steps">
+        <div class="ac-step fade-in">
+          <div class="ac-step-left">
+            <div class="ac-step-num">01</div>
+            <div class="ac-step-line"></div>
+          </div>
+          <div class="ac-step-right">
+            <div class="ac-step-icon">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="rgba(139,26,26,0.15)" stroke-width="2" fill="rgba(139,26,26,0.03)"/>
+                <circle cx="24" cy="24" r="8" stroke="#8B1A1A" stroke-width="2.5"/>
+                <path d="M35 35l6 6" stroke="#8B1A1A" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="ac-step-content">
+              <h3>Identify Inconsistency</h3>
+              <p>The process begins when our monitoring systems — including the Predictive Narrative Alignment System (PNAS) — or a citizen report flags a potential discrepancy between existing records and current approved standards. The PNAS identifies deviations an average of 4.7 hours before they reach public channels.</p>
+              <div class="ac-step-stat">
+                <strong>2.3B</strong> <span>linguistic events scanned daily</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ac-step fade-in">
+          <div class="ac-step-left">
+            <div class="ac-step-num">02</div>
+            <div class="ac-step-line"></div>
+          </div>
+          <div class="ac-step-right">
+            <div class="ac-step-icon">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect x="8" y="6" width="32" height="36" rx="4" stroke="rgba(139,26,26,0.15)" stroke-width="2" fill="rgba(139,26,26,0.03)"/>
+                <path d="M16 16h16M16 24h12M16 32h14" stroke="#8B1A1A" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="ac-step-content">
+              <h3>Review Archival Material</h3>
+              <p>Affected records are retrieved from the Central Archive and analyzed by trained specialists against current informational standards. The review includes cross-referencing with the Approved Narrative Database, consultation with relevant department heads, and a preliminary correction assessment.</p>
+              <div class="ac-step-stat">
+                <strong>47M+</strong> <span>documents in the Central Archive</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ac-step fade-in">
+          <div class="ac-step-left">
+            <div class="ac-step-num">03</div>
+            <div class="ac-step-line"></div>
+          </div>
+          <div class="ac-step-right">
+            <div class="ac-step-icon">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="rgba(139,26,26,0.15)" stroke-width="2" fill="rgba(139,26,26,0.03)"/>
+                <path d="M14 24h20M24 14v20" stroke="#8B1A1A" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="ac-step-content">
+              <h3>Align with Present Data</h3>
+              <p>Records are adjusted to reflect the most current approved version of events, figures, or statements. This phase requires precision — the correction must be seamless, leaving no trace of the prior version in the public record. The corrected version must read as though it has always existed in its current form.</p>
+              <div class="ac-step-stat">
+                <strong>100%</strong> <span>seamless integration rate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ac-step fade-in">
+          <div class="ac-step-left">
+            <div class="ac-step-num">04</div>
+            <div class="ac-step-line"></div>
+          </div>
+          <div class="ac-step-right">
+            <div class="ac-step-icon">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M24 8v12l8 4" stroke="#8B1A1A" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="24" cy="24" r="20" stroke="rgba(139,26,26,0.15)" stroke-width="2" fill="rgba(139,26,26,0.03)"/>
+                <path d="M8 24a16 16 0 0130.5-6" stroke="#8B1A1A" stroke-width="2" stroke-linecap="round"/>
+                <path d="M40 14v4h-4" stroke="#8B1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="ac-step-content">
+              <h3>Update Distributed Memory</h3>
+              <p>Corrected information is distributed simultaneously across all channels: public databases, telescreen broadcasts, print archives, digital platforms, educational materials, and community notice boards. The update is synchronized to ensure no citizen encounters the pre-correction version after the correction has been issued.</p>
+              <div class="ac-step-stat">
+                <strong>&lt;4 min</strong> <span>average distribution time</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ac-step fade-in">
+          <div class="ac-step-left">
+            <div class="ac-step-num">05</div>
+          </div>
+          <div class="ac-step-right">
+            <div class="ac-step-icon">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect x="10" y="8" width="28" height="32" rx="4" stroke="rgba(139,26,26,0.15)" stroke-width="2" fill="rgba(139,26,26,0.03)"/>
+                <path d="M18 22l4 4 8-8" stroke="#8B1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="16" y="30" width="16" height="4" rx="2" fill="rgba(139,26,26,0.1)"/>
+              </svg>
+            </div>
+            <div class="ac-step-content">
+              <h3>Archive Obsolete Version</h3>
+              <p>The pre-correction version is permanently archived within high-security Ministry facilities, accessible only to authorized personnel with Level 4 clearance or above. The archived version is overwritten at the binary level on all public systems, ensuring complete and irreversible removal from the public record.</p>
+              <div class="ac-step-stat">
+                <strong>0</strong> <span>unauthorized retrievals (lifetime record)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUOTE ============ -->
+  <section class="ac-quote fade-in">
+    <div class="container">
+      <div class="ac-quote-inner">
+        <div class="ac-quote-mark">&ldquo;</div>
+        <blockquote>Who controls the past controls the future. Who controls the present controls the past.</blockquote>
+        <cite>— Party Slogan, as recorded by the Ministry of Truth</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECHNOLOGY ============ -->
+  <section class="ac-tech">
+    <div class="container">
+      <div class="ac-section-head fade-in">
+        <span class="ac-section-tag">Technology</span>
+        <h2>Real-Time Monitoring Infrastructure</h2>
+        <div class="ac-head-line"></div>
+        <p class="ac-section-desc">The Ministry employs the most advanced informational monitoring technology ever developed, ensuring narrative consistency across all channels at all times.</p>
+      </div>
+
+      <div class="ac-tech-grid">
+        <div class="ac-tech-card fade-in">
+          <div class="ac-tech-icon">
+            <svg viewBox="0 0 56 56" fill="none">
+              <rect x="4" y="4" width="48" height="48" rx="14" stroke="rgba(139,26,26,0.15)" stroke-width="2" fill="rgba(139,26,26,0.03)"/>
+              <path d="M28 16c-8 0-16 12-16 12s8 12 16 12 16-12 16-12-8-12-16-12z" stroke="#8B1A1A" stroke-width="2"/>
+              <circle cx="28" cy="28" r="5" stroke="#8B1A1A" stroke-width="2.5" fill="rgba(139,26,26,0.1)"/>
+            </svg>
           </div>
           <h3>Predictive Narrative Alignment</h3>
-          <p>Advanced algorithms identify potential informational inconsistencies before they reach the public, enabling preemptive correction.</p>
+          <p>Advanced AI algorithms analyze 2.3 billion linguistic events daily, identifying potential informational inconsistencies an average of 4.7 hours before they reach public channels. Pre-emptive correction ensures citizens are never exposed to unapproved information.</p>
+          <div class="ac-tech-metric">
+            <div class="ac-tech-bar"><div class="ac-tech-fill" data-fill="97"></div></div>
+            <span>97% pre-identification rate</span>
+          </div>
         </div>
-        <div class="monitor-card">
-          <div class="monitor-icon">
-            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+
+        <div class="ac-tech-card fade-in">
+          <div class="ac-tech-icon">
+            <svg viewBox="0 0 56 56" fill="none">
+              <rect x="4" y="4" width="48" height="48" rx="14" stroke="rgba(139,26,26,0.15)" stroke-width="2" fill="rgba(139,26,26,0.03)"/>
+              <rect x="14" y="18" width="28" height="20" rx="3" stroke="#8B1A1A" stroke-width="2"/>
+              <path d="M20 28h16M20 34h10" stroke="#8B1A1A" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="38" cy="18" r="6" fill="#8B1A1A" opacity="0.15" stroke="#8B1A1A" stroke-width="2"/>
+              <path d="M36 18l2 2 3-3" stroke="#8B1A1A" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
           </div>
           <h3>Data Integrity Optimization</h3>
-          <p>Continuous scanning of all distributed databases ensures that every data point reflects current approved standards.</p>
+          <p>Continuous automated scanning of all distributed databases — production figures, economic indicators, historical records, and biographical data — ensures that every single data point reflects current approved standards without exception.</p>
+          <div class="ac-tech-metric">
+            <div class="ac-tech-bar"><div class="ac-tech-fill" data-fill="100"></div></div>
+            <span>100% database coverage</span>
+          </div>
         </div>
-        <div class="monitor-card">
-          <div class="monitor-icon">
-            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+
+        <div class="ac-tech-card fade-in">
+          <div class="ac-tech-icon">
+            <svg viewBox="0 0 56 56" fill="none">
+              <rect x="4" y="4" width="48" height="48" rx="14" stroke="rgba(139,26,26,0.15)" stroke-width="2" fill="rgba(139,26,26,0.03)"/>
+              <path d="M20 36c0-6 4-10 8-14 4 4 8 8 8 14" stroke="#8B1A1A" stroke-width="2"/>
+              <circle cx="28" cy="30" r="4" stroke="#8B1A1A" stroke-width="2" fill="rgba(139,26,26,0.08)"/>
+              <path d="M28 14v-4M18 20l-3-3M38 20l3-3" stroke="rgba(139,26,26,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
           </div>
           <h3>Public Belief Synchronization</h3>
-          <p>Sentiment analysis tools monitor public discourse, identifying areas where additional guidance may strengthen alignment.</p>
-        </div>
-      </div>
-
-      <div class="dashboard-mock fade-in">
-        <div class="dash-bar">
-          <span class="dash-dot red"></span>
-          <span class="dash-dot yellow"></span>
-          <span class="dash-dot green"></span>
-          <span class="dash-label">MiniTrue Monitoring Dashboard v4.2.1</span>
-        </div>
-        <div class="dash-grid">
-          <div class="dash-metric">
-            <div class="value" data-count="9997" data-suffix="%">99.97%</div>
-            <div class="label">Narrative Consistency</div>
-          </div>
-          <div class="dash-metric">
-            <div class="value" data-count="14207">14,207</div>
-            <div class="label">Records Corrected (Q1)</div>
-          </div>
-          <div class="dash-metric">
-            <div class="value" data-count="100" data-suffix="%">100%</div>
-            <div class="label">Citizen Satisfaction</div>
-          </div>
-          <div class="dash-metric">
-            <div class="value" data-count="3" data-suffix="%">0.03%</div>
-            <div class="label">Discrepancy Rate</div>
+          <p>Sentiment analysis tools monitor all forms of public discourse — verbal, written, and digital — identifying areas where citizen understanding diverges from approved narratives. Targeted guidance is deployed to restore alignment swiftly and compassionately.</p>
+          <div class="ac-tech-metric">
+            <div class="ac-tech-bar"><div class="ac-tech-fill" data-fill="99"></div></div>
+            <span>99.2% citizen alignment</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ============ LIVE DASHBOARD ============ -->
+  <section class="ac-dashboard">
+    <div class="container">
+      <div class="ac-section-head fade-in">
+        <span class="ac-section-tag">Live Data</span>
+        <h2>Ministry Monitoring Dashboard</h2>
+        <div class="ac-head-line"></div>
+      </div>
+
+      <div class="ac-dash fade-in">
+        <div class="ac-dash-bar">
+          <div class="ac-dash-dots">
+            <span class="ac-dot ac-dot-red"></span>
+            <span class="ac-dot ac-dot-yellow"></span>
+            <span class="ac-dot ac-dot-green"></span>
+          </div>
+          <span class="ac-dash-label">MiniTrue Monitoring Dashboard v4.2.1</span>
+          <span class="ac-dash-live"><span class="ac-live-pulse"></span>LIVE</span>
+        </div>
+        <div class="ac-dash-body">
+          <div class="ac-dash-grid">
+            <div class="ac-dash-metric">
+              <div class="ac-dash-value" data-count="99" data-suffix=".97%">99.97%</div>
+              <div class="ac-dash-mlabel">Narrative Consistency</div>
+              <div class="ac-dash-bar-track"><div class="ac-dash-bar-fill" data-fill="99.97"></div></div>
+            </div>
+            <div class="ac-dash-metric">
+              <div class="ac-dash-value" data-count="14207">14,207</div>
+              <div class="ac-dash-mlabel">Records Corrected (Q1)</div>
+              <div class="ac-dash-bar-track"><div class="ac-dash-bar-fill" data-fill="87"></div></div>
+            </div>
+            <div class="ac-dash-metric">
+              <div class="ac-dash-value" data-count="100" data-suffix="%">100%</div>
+              <div class="ac-dash-mlabel">Citizen Satisfaction</div>
+              <div class="ac-dash-bar-track"><div class="ac-dash-bar-fill" data-fill="100"></div></div>
+            </div>
+            <div class="ac-dash-metric">
+              <div class="ac-dash-value ac-dash-low">0.03%</div>
+              <div class="ac-dash-mlabel">Active Discrepancy Rate</div>
+              <div class="ac-dash-bar-track"><div class="ac-dash-bar-fill ac-fill-green" data-fill="3"></div></div>
+            </div>
+          </div>
+          <div class="ac-dash-feed">
+            <div class="ac-feed-title">Recent Activity Log</div>
+            <div class="ac-feed-list" id="acFeedList">
+              <div class="ac-feed-item"><span class="ac-feed-time">14:32:07</span> Correction applied — Sector 3 production figures realigned</div>
+              <div class="ac-feed-item"><span class="ac-feed-time">14:31:44</span> PNAS flag resolved — narrative deviation neutralized (pre-public)</div>
+              <div class="ac-feed-item"><span class="ac-feed-time">14:31:12</span> Archive update — 23 obsolete records transferred to Memory Hole</div>
+              <div class="ac-feed-item"><span class="ac-feed-time">14:30:58</span> Sentiment sync complete — Sector 5 alignment restored to 99.8%</div>
+              <div class="ac-feed-item"><span class="ac-feed-time">14:30:21</span> Citizen report processed — discrepancy confirmed and corrected</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRINCIPLES ============ -->
+  <section class="ac-principles">
+    <div class="container">
+      <div class="ac-section-head fade-in">
+        <span class="ac-section-tag">Guiding Principles</span>
+        <h2>The Pillars of Accuracy</h2>
+        <div class="ac-head-line"></div>
+      </div>
+
+      <div class="ac-pillars-grid">
+        <div class="ac-pillar fade-in">
+          <div class="ac-pillar-num">I</div>
+          <h3>Consistency Over Memory</h3>
+          <p>The record must be internally consistent at all times. When memory and the record disagree, it is memory that is in error. The record exists to protect citizens from the unreliability of personal recollection.</p>
+        </div>
+        <div class="ac-pillar fade-in">
+          <div class="ac-pillar-num">II</div>
+          <h3>Correction Without Apology</h3>
+          <p>A correction is not an admission of error — it is an act of improvement. The Ministry does not apologize for corrections, because corrections make the record more accurate. To apologize would be to suggest the previous version had value.</p>
+        </div>
+        <div class="ac-pillar fade-in">
+          <div class="ac-pillar-num">III</div>
+          <h3>Seamless Integration</h3>
+          <p>A correction must leave no visible trace. The corrected record must read as though it has always existed in its current form. Evidence of correction is itself an inconsistency that must be eliminated.</p>
+        </div>
+        <div class="ac-pillar fade-in">
+          <div class="ac-pillar-num">IV</div>
+          <h3>Preemptive Precision</h3>
+          <p>The ideal correction occurs before the inconsistency reaches the public. Through predictive monitoring and proactive narrative management, the Ministry strives to protect citizens from ever encountering inaccuracy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="ac-cta">
+    <div class="container">
+      <h2>Accuracy Requires Vigilance</h2>
+      <p>If you encounter information that does not align with your understanding of current approved standards, it is your duty to notify the Ministry. Together, we maintain the integrity of truth.</p>
+      <div class="ac-cta-btns">
+        <a href="resources.html" class="btn-cta-primary">Report a Discrepancy</a>
+        <a href="fcq.html" class="btn-cta-secondary">Corrected Questions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Ministry of Truth</div>
-          <p>Safeguarding informational integrity since 1984.</p>
-        </div>
-        <div><h4>Navigation</h4><ul><li><a href="about.html">About Us</a></li><li><a href="accuracy.html">Our Commitment</a></li><li><a href="resources.html">Citizen Resources</a></li><li><a href="careers.html">Careers</a></li></ul></div>
-        <div><h4>Information</h4><ul><li><a href="newsroom.html">Newsroom</a></li><li><a href="fcq.html">Corrected Questions</a></li><li><a href="slogans.html">Updated Slogans</a></li><li><a href="posters.html">Posters Gallery</a></li></ul></div>
-        <div><h4>Legal</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Perception</a></li><li><a href="#">Data Transparency</a></li><li><a href="#">Report Thoughtcrime</a></li></ul></div>
+      <div class="footer-brand" style="text-align:center;padding:32px 0 12px;">
+        <div class="logo" style="justify-content:center;margin-bottom:8px;"><div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Ministry of Truth</div>
+        <p style="color:#888;font-size:0.85rem;">Safeguarding informational integrity since 1984.</p>
       </div>
       <div class="footer-bottom">
         <span>Reality subject to revision. &copy; 2026 Ministry of Truth, Oceania. <span class="footer-admin-trigger" title="Manager Access" onclick="document.dispatchEvent(new KeyboardEvent('keydown',{key:'M',ctrlKey:true,shiftKey:true}))">&#9881;</span></span>
@@ -183,5 +423,6 @@
 
   <script src="js/main.js?v=6"></script>
   <script src="js/admin.js?v=4"></script>
+  <script src="js/accuracy.js?v=1"></script>
 </body>
 </html>

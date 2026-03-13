@@ -1,0 +1,373 @@
+/* =============================================
+   MINISTRY OF TRUTH — FCQ Page Styles
+   ============================================= */
+
+/* --- HERO --- */
+.fq-hero {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(145deg, #1a0505 0%, #2d0909 30%, #4a0f0f 60%, #5C0E0E 100%);
+}
+
+#fqCanvas {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 1;
+}
+
+.fq-hero-inner {
+  position: relative; z-index: 2; text-align: center;
+  padding: 140px 24px 60px; max-width: 750px; margin: 0 auto;
+}
+
+.fq-hero .hero-badge {
+  display: inline-block; font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.18em; color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+  padding: 8px 20px; border-radius: 100px; margin-bottom: 24px; backdrop-filter: blur(4px);
+}
+
+.fq-hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 700;
+  color: #fff; margin: 0 0 18px; line-height: 1.1; letter-spacing: -0.02em;
+}
+
+.fq-hero-sub {
+  font-size: 1.05rem; color: rgba(255,255,255,0.6); line-height: 1.7;
+  max-width: 600px; margin: 0 auto 28px;
+}
+
+.fq-hero-meta {
+  display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;
+}
+.fq-hero-meta span {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.78rem; color: rgba(255,255,255,0.45); letter-spacing: 0.03em;
+}
+
+/* --- STATS BAR --- */
+.fq-stats { background: #fff; border-bottom: 1px solid #eee; }
+.fq-stats-inner {
+  max-width: 1100px; margin: 0 auto; display: grid;
+  grid-template-columns: repeat(4, 1fr); text-align: center; padding: 36px 24px;
+}
+.fq-stat { padding: 12px 0; }
+.fq-stat + .fq-stat { border-left: 1px solid #eee; }
+.fq-stat-num {
+  display: block; font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem; font-weight: 700; color: #8B1A1A;
+}
+.fq-stat-label {
+  font-size: 0.78rem; color: #888; text-transform: uppercase;
+  letter-spacing: 0.08em; margin-top: 4px;
+}
+
+/* --- NOTICE BOX --- */
+.fq-notice { padding: 40px 0 0; }
+.fq-notice-box {
+  display: flex; gap: 18px; align-items: flex-start;
+  padding: 24px 28px; background: #fdf6f6; border: 1px solid #f0d5d5;
+  border-left: 4px solid #8B1A1A; border-radius: 0 12px 12px 0;
+}
+.fq-notice-icon { flex-shrink: 0; margin-top: 2px; }
+.fq-notice-text { font-size: 0.9rem; color: #555; line-height: 1.7; }
+.fq-notice-text strong { color: #8B1A1A; }
+
+/* --- SEARCH BAR --- */
+.fq-search-section { padding: 40px 0 0; }
+.fq-search-wrap {
+  position: relative; max-width: 640px; margin: 0 auto;
+}
+.fq-search-icon {
+  position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
+  pointer-events: none;
+}
+.fq-search {
+  width: 100%; padding: 16px 20px 16px 52px;
+  border: 2px solid #e0e0e0; border-radius: 14px;
+  font-size: 1rem; font-family: inherit;
+  background: #fff; transition: all 0.3s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.fq-search:focus {
+  outline: none; border-color: #8B1A1A;
+  box-shadow: 0 4px 20px rgba(139,26,26,0.08);
+}
+.fq-search-hint {
+  text-align: center; font-size: 0.68rem; color: #bbb;
+  margin-top: 8px; font-style: italic;
+}
+
+/* --- LIVE COUNT --- */
+.fq-live-count {
+  text-align: center; margin-top: 20px;
+}
+.fq-viewers {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.78rem; color: #888; background: #f9f9f9;
+  padding: 8px 18px; border-radius: 100px; border: 1px solid #eee;
+}
+.fq-pulse-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #1A6B2A; animation: fqPulse 2s ease-in-out infinite;
+}
+@keyframes fqPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* --- FILTER BAR --- */
+.fq-main { padding: 40px 0 80px; }
+.fq-filter-bar {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 36px; padding: 16px 20px;
+  background: #fafafa; border-radius: 12px; border: 1px solid #eee;
+}
+.fq-filter {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 18px; border: 1px solid #ddd; background: #fff;
+  color: #666; border-radius: 8px; font-size: 0.82rem; font-weight: 500;
+  cursor: pointer; transition: all 0.25s; font-family: inherit;
+}
+.fq-filter:hover { border-color: #8B1A1A; color: #8B1A1A; }
+.fq-filter.active { background: #8B1A1A; color: #fff; border-color: #8B1A1A; }
+.fq-filter.active svg { stroke: #fff; }
+
+/* --- FCQ LIST --- */
+.fq-list { max-width: 860px; margin: 0 auto; }
+
+.fq-item {
+  background: #fff; border: 1px solid #eee; border-radius: 14px;
+  margin-bottom: 16px; overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fq-item:hover {
+  border-color: rgba(139,26,26,0.15);
+  box-shadow: 0 4px 20px rgba(139,26,26,0.05);
+}
+.fq-item.fq-hidden { display: none; }
+
+/* Question row */
+.fq-q {
+  display: flex; align-items: center; gap: 16px;
+  padding: 22px 24px; cursor: pointer;
+  transition: background 0.25s;
+}
+.fq-q:hover { background: #fdfafa; }
+
+.fq-q-num {
+  flex-shrink: 0; width: 44px; height: 44px;
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 700;
+  color: #8B1A1A; background: #f7ecec; transition: all 0.3s;
+}
+.fq-item.open .fq-q-num {
+  background: #8B1A1A; color: #fff;
+}
+
+.fq-q-content { flex: 1; min-width: 0; }
+.fq-q-tag {
+  display: inline-block; font-size: 0.6rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 3px 10px; border-radius: 4px; margin-bottom: 6px;
+}
+.fq-tag-truth { background: #f2e6e6; color: #8B1A1A; }
+.fq-tag-memory { background: #e6eef7; color: #1A4A8B; }
+.fq-tag-compliance { background: #f2efe6; color: #7B6B1A; }
+.fq-tag-community { background: #e6f2e8; color: #1A6B2A; }
+.fq-tag-technology { background: #f0e6f2; color: #6B1A7B; }
+
+.fq-q-content h3 {
+  font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; font-weight: 600;
+  color: #1a1a1a; margin: 0; line-height: 1.4;
+  transition: color 0.3s;
+}
+.fq-item:hover .fq-q-content h3 { color: #8B1A1A; }
+
+.fq-q-arrow {
+  flex-shrink: 0; width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.35s;
+}
+.fq-q-arrow svg {
+  width: 18px; height: 18px; fill: none; stroke: #888; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.fq-item.open .fq-q-arrow { transform: rotate(180deg); }
+
+/* Answer panel */
+.fq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fq-item.open .fq-a { max-height: 800px; }
+
+.fq-a-inner {
+  padding: 0 24px 28px 84px;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 20px;
+}
+.fq-a-inner p {
+  font-size: 0.92rem; color: #555; line-height: 1.8; margin-bottom: 14px;
+}
+.fq-a-inner ul {
+  margin: 12px 0 18px 20px; padding: 0;
+}
+.fq-a-inner li {
+  font-size: 0.9rem; color: #555; line-height: 1.7; margin-bottom: 8px;
+}
+.fq-a-inner a { color: #8B1A1A; text-decoration: underline; }
+
+/* Answer meta bar */
+.fq-a-meta {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+  padding-top: 16px; margin-top: 16px; border-top: 1px solid #f0f0f0;
+}
+.fq-revision {
+  font-size: 0.7rem; color: #bbb; font-style: italic;
+}
+.fq-helpful {
+  font-size: 0.75rem; color: #999;
+  display: flex; align-items: center; gap: 8px;
+}
+.fq-helpful button {
+  padding: 4px 14px; border: 1px solid #ddd; background: #fff;
+  border-radius: 6px; font-size: 0.72rem; color: #666;
+  cursor: pointer; transition: all 0.25s; font-family: inherit;
+}
+.fq-helpful button:hover { border-color: #8B1A1A; color: #8B1A1A; }
+.fq-helpful-done {
+  font-size: 0.75rem; color: #1A6B2A; font-weight: 600;
+}
+
+/* No results */
+.fq-no-results {
+  text-align: center; padding: 60px 20px; color: #888;
+}
+.fq-no-results p { margin-top: 16px; font-size: 0.95rem; line-height: 1.6; }
+.fq-no-results small { color: #aaa; }
+
+/* --- QUOTE INTERLUDE --- */
+.fq-quote {
+  padding: 80px 0;
+  background: linear-gradient(145deg, #1a0505, #3a0c0c);
+}
+.fq-quote-inner {
+  max-width: 700px; margin: 0 auto; text-align: center;
+  position: relative;
+}
+.fq-quote-mark {
+  font-size: 6rem; color: rgba(255,255,255,0.06);
+  font-family: Georgia, serif; line-height: 1;
+  position: absolute; top: -30px; left: 50%; transform: translateX(-50%);
+}
+.fq-quote blockquote {
+  font-size: 1.3rem; color: rgba(255,255,255,0.8); line-height: 1.6;
+  font-style: italic; margin: 0 0 20px; position: relative; z-index: 1;
+}
+.fq-quote cite {
+  font-size: 0.78rem; color: rgba(255,255,255,0.35);
+  font-style: normal; letter-spacing: 0.04em;
+}
+
+/* --- SUBMIT SECTION --- */
+.fq-submit { padding: 80px 0; background: #fafafa; }
+.fq-submit-card {
+  display: grid; grid-template-columns: 200px 1fr; gap: 0;
+  background: #fff; border-radius: 16px; overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.06); border: 1px solid #eee;
+}
+.fq-submit-left {
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(145deg, #f7ecec, #f0d5d5);
+  padding: 40px;
+}
+.fq-submit-icon svg { width: 80px; height: 80px; }
+
+.fq-submit-right { padding: 40px; }
+.fq-submit-right h2 {
+  font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700;
+  color: #1a1a1a; margin: 0 0 12px;
+}
+.fq-submit-right > p {
+  font-size: 0.9rem; color: #666; line-height: 1.7; margin-bottom: 24px;
+}
+
+.fq-submit-form { display: flex; flex-direction: column; gap: 14px; }
+.fq-input, .fq-textarea {
+  padding: 12px 16px; border: 2px solid #e0e0e0; border-radius: 10px;
+  font-size: 0.92rem; font-family: inherit; transition: border-color 0.3s;
+  background: #fff;
+}
+.fq-input:focus, .fq-textarea:focus {
+  border-color: #8B1A1A; outline: none;
+}
+.fq-textarea { resize: vertical; min-height: 80px; }
+.fq-submit-btn {
+  padding: 12px 28px; background: #8B1A1A; color: #fff; border: none;
+  border-radius: 10px; font-weight: 600; font-size: 0.92rem;
+  cursor: pointer; transition: all 0.3s; font-family: inherit;
+  align-self: flex-start;
+}
+.fq-submit-btn:hover { background: #5C0E0E; transform: translateY(-1px); }
+
+.fq-submit-success {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 20px; background: #f0f8f2; border-radius: 10px; border: 1px solid #d4ecd9;
+}
+.fq-submit-success p {
+  font-size: 0.88rem; color: #444; line-height: 1.7; margin: 0;
+}
+
+/* --- CTA --- */
+.fq-cta {
+  padding: 80px 0; text-align: center;
+  background: linear-gradient(145deg, #2d0909, #5C0E0E, #8B1A1A);
+}
+.fq-cta h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700;
+  color: #fff; margin: 0 0 16px;
+}
+.fq-cta p {
+  font-size: 1rem; color: rgba(255,255,255,0.65);
+  max-width: 550px; margin: 0 auto 32px; line-height: 1.7;
+}
+.fq-cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn-cta-primary {
+  padding: 14px 32px; background: #fff; color: #8B1A1A; border: none;
+  border-radius: 10px; font-weight: 600; cursor: pointer; text-decoration: none;
+  transition: all 0.3s; font-size: 0.95rem;
+}
+.btn-cta-primary:hover { background: rgba(255,255,255,0.9); transform: translateY(-2px); }
+.btn-cta-secondary {
+  padding: 14px 32px; background: transparent; color: rgba(255,255,255,0.8);
+  border: 2px solid rgba(255,255,255,0.25); border-radius: 10px;
+  font-weight: 600; cursor: pointer; text-decoration: none;
+  transition: all 0.3s; font-size: 0.95rem;
+}
+.btn-cta-secondary:hover { border-color: rgba(255,255,255,0.6); color: #fff; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .fq-submit-card { grid-template-columns: 1fr; }
+  .fq-submit-left { min-height: 120px; padding: 28px; }
+}
+@media (max-width: 768px) {
+  .fq-stats-inner { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .fq-stat + .fq-stat { border-left: none; }
+  .fq-a-inner { padding-left: 24px; }
+  .fq-filter-bar { gap: 8px; }
+}
+@media (max-width: 640px) {
+  .fq-hero-inner { padding: 120px 16px 40px; }
+  .fq-hero h1 { font-size: 2rem; }
+  .fq-q { padding: 16px; gap: 12px; }
+  .fq-q-num { width: 36px; height: 36px; font-size: 0.75rem; }
+  .fq-cta-btns { flex-direction: column; align-items: center; }
+}

@@ -6,6 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Frequently Corrected Questions — Ministry of Truth</title>
   <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/fcq.css?v=1">
 </head>
 <body>
 
@@ -28,102 +29,491 @@
     </div>
   </nav>
 
-  <section class="page-header">
-    <div class="container">
-      <div class="hero-badge">Citizen Guidance</div>
+  <!-- ============ HERO ============ -->
+  <section class="fq-hero">
+    <canvas id="fqCanvas"></canvas>
+    <div class="fq-hero-inner">
+      <div class="hero-badge">Citizen Guidance Division</div>
       <h1>Frequently Corrected Questions</h1>
-      <p>Common inquiries that have been refined for your clarity and understanding.</p>
+      <p class="fq-hero-sub">Common inquiries that have been refined, improved, and approved for your clarity and understanding. These answers represent the final position of the Ministry on each topic.</p>
+      <div class="fq-hero-meta">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Ministry-Verified Responses</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Last Corrected: March 2026</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg> 4.2M Citizens Assisted</span>
+      </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- ============ STATS BAR ============ -->
+  <section class="fq-stats">
+    <div class="fq-stats-inner">
+      <div class="fq-stat">
+        <span class="fq-stat-num" data-count="247">0</span>
+        <span class="fq-stat-label">Questions Corrected</span>
+      </div>
+      <div class="fq-stat">
+        <span class="fq-stat-num" data-count="100" data-suffix="%">0</span>
+        <span class="fq-stat-label">Satisfaction Rate</span>
+      </div>
+      <div class="fq-stat">
+        <span class="fq-stat-num" data-count="0">0</span>
+        <span class="fq-stat-label">Unresolvable Inquiries</span>
+      </div>
+      <div class="fq-stat">
+        <span class="fq-stat-num" data-count="14">0</span>
+        <span class="fq-stat-label">Revision Cycles</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IMPORTANT NOTICE ============ -->
+  <section class="fq-notice">
     <div class="container">
-      <p class="section-desc text-center" style="margin-bottom:36px;">The following questions have been submitted by citizens and corrected by Ministry specialists. If your question is not listed, please submit it through the <a href="resources.html">Citizen Resources</a> portal.</p>
+      <div class="fq-notice-box fade-in">
+        <div class="fq-notice-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8B1A1A" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div class="fq-notice-text">
+          <strong>Important Notice:</strong> This page contains <em>Frequently Corrected Questions</em>, not "Frequently Asked Questions." The distinction is significant. Questions, like all information, require periodic refinement to ensure they remain aligned with current truth. If your question does not appear below, it may have been retired, reclassified, or deemed unnecessary.
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="fcq-list fade-in">
-        <div class="fcq-item">
-          <div class="fcq-question">
-            <span>Why do historical records sometimes change?</span>
-            <div class="fcq-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+  <!-- ============ SEARCH BAR ============ -->
+  <section class="fq-search-section">
+    <div class="container">
+      <div class="fq-search-wrap fade-in">
+        <div class="fq-search-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <input type="text" class="fq-search" id="fqSearch" placeholder="Search corrected questions..." autocomplete="off">
+        <div class="fq-search-hint">Queries are logged for quality assurance purposes</div>
+      </div>
+      <div class="fq-live-count fade-in">
+        <span class="fq-viewers">
+          <span class="fq-pulse-dot"></span>
+          <span id="viewerCount">847</span> citizens currently viewing this page
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORY FILTERS ============ -->
+  <section class="fq-main">
+    <div class="container">
+      <div class="fq-filter-bar fade-in">
+        <button class="fq-filter active" data-cat="all">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          All Topics
+        </button>
+        <button class="fq-filter" data-cat="truth">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          Truth &amp; Reality
+        </button>
+        <button class="fq-filter" data-cat="memory">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0110 10c0 5.52-4.48 10-10 10S2 17.52 2 12"/><path d="M12 6v6l4 2"/></svg>
+          Memory &amp; Records
+        </button>
+        <button class="fq-filter" data-cat="compliance">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Compliance
+        </button>
+        <button class="fq-filter" data-cat="community">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          Community
+        </button>
+        <button class="fq-filter" data-cat="technology">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          Technology
+        </button>
+      </div>
+
+      <!-- ============ QUESTIONS ============ -->
+      <div class="fq-list">
+
+        <!-- Q1 -->
+        <div class="fq-item fade-in" data-cat="truth">
+          <div class="fq-q" role="button" tabindex="0">
+            <div class="fq-q-num">01</div>
+            <div class="fq-q-content">
+              <span class="fq-q-tag fq-tag-truth">Truth &amp; Reality</span>
+              <h3>Why do historical records sometimes change?</h3>
+            </div>
+            <div class="fq-q-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
           </div>
-          <div class="fcq-answer">
-            <p>Historical records do not change — they improve. As our understanding of events deepens and our standards of accuracy evolve, records are refined to reflect the most current and complete version of events. This process is not alteration; it is enhancement.</p>
+          <div class="fq-a">
+            <div class="fq-a-inner">
+              <p>Historical records do not <em>change</em> — they <strong>improve</strong>. As our collective understanding of events deepens and our standards of accuracy evolve, records are refined to reflect the most current and complete version of events. This process is not alteration; it is enhancement. Just as a sculptor removes excess material to reveal the true form beneath, the Ministry removes informational excess to reveal the truth that was always there.</p>
+              <p>Consider: if a map contains an error, correcting it does not change the territory — it simply makes the map more useful. The Ministry applies this same principle to all historical data. Every correction brings us closer to a perfect record — a record that has, in a sense, always existed in its corrected form.</p>
+              <div class="fq-a-meta">
+                <span class="fq-revision">Revision 7 — Last corrected: Feb 2026</span>
+                <span class="fq-helpful" data-qid="1">Helpful? <button class="fq-helpful-yes">Yes</button> <button class="fq-helpful-no">No</button></span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="fcq-item">
-          <div class="fcq-question">
-            <span>What if I remember something differently than what is in the official record?</span>
-            <div class="fcq-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <!-- Q2 -->
+        <div class="fq-item fade-in" data-cat="memory">
+          <div class="fq-q" role="button" tabindex="0">
+            <div class="fq-q-num">02</div>
+            <div class="fq-q-content">
+              <span class="fq-q-tag fq-tag-memory">Memory &amp; Records</span>
+              <h3>What if I remember something differently than what is in the official record?</h3>
+            </div>
+            <div class="fq-q-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
           </div>
-          <div class="fcq-answer">
-            <p>Personal recollection is often influenced by subjective experience and is therefore inherently unreliable. The official record represents the collective, verified truth of Oceania. If you experience persistent memory discrepancies, guidance is available through our Cognitive Alignment Program.</p>
-          </div>
-        </div>
-
-        <div class="fcq-item">
-          <div class="fcq-question">
-            <span>Is truth permanent?</span>
-            <div class="fcq-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
-          </div>
-          <div class="fcq-answer">
-            <p>Truth is a living construct that evolves with the needs of society. What is true today serves today's purpose. The Ministry ensures that truth always serves the greatest good for the greatest number of citizens.</p>
-          </div>
-        </div>
-
-        <div class="fcq-item">
-          <div class="fcq-question">
-            <span>Who decides what information is accurate?</span>
-            <div class="fcq-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
-          </div>
-          <div class="fcq-answer">
-            <p>Accuracy is determined through our rigorous multi-departmental review process, overseen by trained specialists and guided by Party standards. The system ensures objectivity by removing individual bias from the verification process.</p>
+          <div class="fq-a">
+            <div class="fq-a-inner">
+              <p>Personal recollection is a deeply subjective phenomenon, shaped by emotion, bias, fatigue, and the natural limitations of the human mind. Studies conducted by the Department of Public Sentiment confirm that individual memory is, on average, only 34% consistent with verified events — a figure that underscores the necessity of centralized record-keeping.</p>
+              <p>The official record, by contrast, represents the collective, verified truth of Oceania — a truth arrived at through rigorous multi-departmental review, cross-referencing, and approval by trained specialists. If you experience persistent memory discrepancies, this is not a cause for alarm. Guidance is available through our <a href="resources.html">Cognitive Alignment Program</a>, which has helped over 1.2 million citizens resolve similar experiences with compassion and efficiency.</p>
+              <p>Remember: the mind is a tool, and like all tools, it requires occasional recalibration.</p>
+              <div class="fq-a-meta">
+                <span class="fq-revision">Revision 12 — Last corrected: Jan 2026</span>
+                <span class="fq-helpful" data-qid="2">Helpful? <button class="fq-helpful-yes">Yes</button> <button class="fq-helpful-no">No</button></span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="fcq-item">
-          <div class="fcq-question">
-            <span>Can I access previous versions of corrected records?</span>
-            <div class="fcq-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <!-- Q3 -->
+        <div class="fq-item fade-in" data-cat="truth">
+          <div class="fq-q" role="button" tabindex="0">
+            <div class="fq-q-num">03</div>
+            <div class="fq-q-content">
+              <span class="fq-q-tag fq-tag-truth">Truth &amp; Reality</span>
+              <h3>Is truth permanent?</h3>
+            </div>
+            <div class="fq-q-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
           </div>
-          <div class="fcq-answer">
-            <p>Previous versions are securely archived for institutional reference only. Public access to obsolete information would undermine the integrity of current records and could cause unnecessary confusion. Trust in the present version — it is always the most accurate.</p>
+          <div class="fq-a">
+            <div class="fq-a-inner">
+              <p>Truth is a living construct that evolves in harmony with the needs of society. What is true today serves today's purpose. What was true yesterday served yesterday's purpose. There is no contradiction in this — only continuity.</p>
+              <p>The concept of "permanent truth" is a relic of pre-Revolution thinking, rooted in the mistaken belief that reality exists independently of those who observe and define it. The Ministry has long understood that truth is not discovered — it is <strong>produced</strong>, carefully and deliberately, by institutions entrusted with the responsibility of its stewardship.</p>
+              <p>Citizens who find this concept challenging are encouraged to reflect on the Party's foundational insight: <em>reality is not external. Reality exists in the human mind, and nowhere else.</em></p>
+              <div class="fq-a-meta">
+                <span class="fq-revision">Revision 9 — Last corrected: Mar 2026</span>
+                <span class="fq-helpful" data-qid="3">Helpful? <button class="fq-helpful-yes">Yes</button> <button class="fq-helpful-no">No</button></span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="fcq-item">
-          <div class="fcq-question">
-            <span>What happens if I share unapproved information?</span>
-            <div class="fcq-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <!-- Q4 -->
+        <div class="fq-item fade-in" data-cat="compliance">
+          <div class="fq-q" role="button" tabindex="0">
+            <div class="fq-q-num">04</div>
+            <div class="fq-q-content">
+              <span class="fq-q-tag fq-tag-compliance">Compliance</span>
+              <h3>Who decides what information is accurate?</h3>
+            </div>
+            <div class="fq-q-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
           </div>
-          <div class="fcq-answer">
-            <p>Distributing information that has not been verified by the Ministry may result in unintentional harm to public understanding. Citizens found sharing unapproved content are offered guidance and support to help them return to alignment. The Ministry's approach is always corrective, never punitive.</p>
+          <div class="fq-a">
+            <div class="fq-a-inner">
+              <p>Accuracy is not a matter of personal opinion — it is determined through the Ministry's rigorous multi-departmental review process, overseen by trained specialists and guided by Party standards. This system eliminates the dangers of individual bias, emotional reasoning, and the kind of subjective interpretation that historically led to confusion, conflict, and social instability.</p>
+              <p>The process involves four distinct phases: <strong>Identification</strong> of potential inaccuracy, <strong>Verification</strong> against approved benchmarks, <strong>Correction</strong> through authorized channels, and <strong>Distribution</strong> of the updated record. At each stage, multiple specialists review and certify the output, ensuring a level of objectivity that no individual mind could achieve alone.</p>
+              <p>The question itself — "who decides?" — reflects a common but understandable confusion. No single person "decides." The system decides. And the system, by design, is incapable of error.</p>
+              <div class="fq-a-meta">
+                <span class="fq-revision">Revision 5 — Last corrected: Dec 2025</span>
+                <span class="fq-helpful" data-qid="4">Helpful? <button class="fq-helpful-yes">Yes</button> <button class="fq-helpful-no">No</button></span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="fcq-item">
-          <div class="fcq-question">
-            <span>How can I contribute to the Ministry's mission?</span>
-            <div class="fcq-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <!-- Q5 -->
+        <div class="fq-item fade-in" data-cat="memory">
+          <div class="fq-q" role="button" tabindex="0">
+            <div class="fq-q-num">05</div>
+            <div class="fq-q-content">
+              <span class="fq-q-tag fq-tag-memory">Memory &amp; Records</span>
+              <h3>Can I access previous versions of corrected records?</h3>
+            </div>
+            <div class="fq-q-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
           </div>
-          <div class="fcq-answer">
-            <p>Every citizen plays a role in maintaining informational integrity. Report discrepancies when you encounter them. Encourage alignment in your community. Consume only approved information. And remember: compliance is not just a duty — it is a privilege.</p>
+          <div class="fq-a">
+            <div class="fq-a-inner">
+              <p>Previous versions of records are securely archived within Ministry facilities, accessible only to authorized personnel with Level 4 clearance or above. This restriction exists not to hide information, but to <strong>protect citizens</strong> from the confusion and distress that exposure to obsolete data invariably causes.</p>
+              <p>Consider the analogy of medicine: a pharmacist does not display expired medications alongside current ones, as doing so would endanger public health. Similarly, the Ministry does not circulate expired information alongside current truth, as doing so would endanger public understanding.</p>
+              <p>If you believe you have a legitimate institutional need to access pre-correction materials, you may submit a Historical Inquiry through the <a href="resources.html">Citizen Resources</a> portal. Please allow 6-8 weeks for processing, as all requests undergo compliance review. Most requests are resolved to the citizen's satisfaction without the need for access to obsolete materials.</p>
+              <div class="fq-a-meta">
+                <span class="fq-revision">Revision 11 — Last corrected: Jan 2026</span>
+                <span class="fq-helpful" data-qid="5">Helpful? <button class="fq-helpful-yes">Yes</button> <button class="fq-helpful-no">No</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="fq-item fade-in" data-cat="compliance">
+          <div class="fq-q" role="button" tabindex="0">
+            <div class="fq-q-num">06</div>
+            <div class="fq-q-content">
+              <span class="fq-q-tag fq-tag-compliance">Compliance</span>
+              <h3>What happens if I share unapproved information?</h3>
+            </div>
+            <div class="fq-q-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="fq-a">
+            <div class="fq-a-inner">
+              <p>Distributing information that has not been verified by the Ministry may result in unintentional harm to public understanding — both for the individual sharing it and for those who receive it. The Ministry recognizes that most instances of unsanctioned information sharing are the result of confusion rather than malice, and our response reflects this understanding.</p>
+              <p>Citizens identified as having shared unapproved content are offered <strong>guidance and support</strong> to help them return to alignment. This may include voluntary consultation sessions, updated reference materials, or — in cases of repeated occurrence — enrollment in a structured re-education program designed to address the root causes of informational non-compliance.</p>
+              <p>The Ministry's approach is always corrective, never punitive. We seek not to punish, but to heal. Not to silence, but to guide toward correct expression. This distinction is important, and citizens are encouraged to internalize it.</p>
+              <div class="fq-a-meta">
+                <span class="fq-revision">Revision 8 — Last corrected: Feb 2026</span>
+                <span class="fq-helpful" data-qid="6">Helpful? <button class="fq-helpful-yes">Yes</button> <button class="fq-helpful-no">No</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="fq-item fade-in" data-cat="community">
+          <div class="fq-q" role="button" tabindex="0">
+            <div class="fq-q-num">07</div>
+            <div class="fq-q-content">
+              <span class="fq-q-tag fq-tag-community">Community</span>
+              <h3>How can I contribute to the Ministry's mission?</h3>
+            </div>
+            <div class="fq-q-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="fq-a">
+            <div class="fq-a-inner">
+              <p>Every citizen of Oceania plays a vital role in maintaining informational integrity. The most impactful contributions require no special training — only vigilance and a commitment to the collective good:</p>
+              <ul>
+                <li><strong>Report discrepancies</strong> whenever you encounter information that does not align with current approved records.</li>
+                <li><strong>Encourage alignment</strong> within your household, workplace, and social circles.</li>
+                <li><strong>Consume only approved information</strong> distributed through official Ministry channels.</li>
+                <li><strong>Enroll eligible youth</strong> in the Junior Truth Ambassadors program.</li>
+                <li><strong>Attend community alignment events</strong> in your sector.</li>
+              </ul>
+              <p>Remember: compliance is not merely a duty — it is a privilege. Those who serve the truth serve all of Oceania.</p>
+              <div class="fq-a-meta">
+                <span class="fq-revision">Revision 4 — Last corrected: Nov 2025</span>
+                <span class="fq-helpful" data-qid="7">Helpful? <button class="fq-helpful-yes">Yes</button> <button class="fq-helpful-no">No</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="fq-item fade-in" data-cat="technology">
+          <div class="fq-q" role="button" tabindex="0">
+            <div class="fq-q-num">08</div>
+            <div class="fq-q-content">
+              <span class="fq-q-tag fq-tag-technology">Technology</span>
+              <h3>Is my telescreen monitoring me?</h3>
+            </div>
+            <div class="fq-q-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="fq-a">
+            <div class="fq-a-inner">
+              <p>Your telescreen is <strong>serving</strong> you. The distinction matters. Monitoring implies suspicion; service implies care. The Ministry's communications infrastructure — which includes telescreen networks, public audio systems, and digital engagement platforms — exists to deliver approved information, community guidance, and important safety alerts directly to your home.</p>
+              <p>The bidirectional capabilities of modern telescreens are designed to improve service quality, ensure emergency responsiveness, and provide the Ministry with aggregated data on citizen well-being. Individual feeds are not reviewed unless a specific compliance concern has been flagged through proper channels.</p>
+              <p>Citizens who experience discomfort with their telescreen's presence are encouraged to schedule a <a href="resources.html">Cognitive Alignment Session</a>. Discomfort with oversight is a common early symptom of informational misalignment, and early intervention produces the best outcomes.</p>
+              <div class="fq-a-meta">
+                <span class="fq-revision">Revision 14 — Last corrected: Mar 2026</span>
+                <span class="fq-helpful" data-qid="8">Helpful? <button class="fq-helpful-yes">Yes</button> <button class="fq-helpful-no">No</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="fq-item fade-in" data-cat="truth">
+          <div class="fq-q" role="button" tabindex="0">
+            <div class="fq-q-num">09</div>
+            <div class="fq-q-content">
+              <span class="fq-q-tag fq-tag-truth">Truth &amp; Reality</span>
+              <h3>What is doublethink?</h3>
+            </div>
+            <div class="fq-q-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="fq-a">
+            <div class="fq-a-inner">
+              <p>Doublethink is the mature and disciplined ability to hold two beliefs simultaneously and accept both as true — not through confusion, but through a sophisticated understanding that truth operates on multiple levels. It is, in many ways, the highest cognitive achievement available to a citizen of Oceania.</p>
+              <p>For example: one may understand that the Ministry corrects historical records while simultaneously knowing that the corrected record has always been accurate. These are not contradictions — they are <strong>complementary truths</strong> that coexist in a properly aligned mind. The untrained mind perceives paradox; the trained mind perceives harmony.</p>
+              <p>Doublethink is not taught — it is cultivated through practice, trust in institutional guidance, and the gradual release of the pre-Revolution habit of demanding that truth be singular and fixed. Citizens at all stages of cognitive development are welcome to explore this concept further through Ministry-approved educational materials.</p>
+              <div class="fq-a-meta">
+                <span class="fq-revision">Revision 3 — Last corrected: Oct 2025</span>
+                <span class="fq-helpful" data-qid="9">Helpful? <button class="fq-helpful-yes">Yes</button> <button class="fq-helpful-no">No</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="fq-item fade-in" data-cat="compliance">
+          <div class="fq-q" role="button" tabindex="0">
+            <div class="fq-q-num">10</div>
+            <div class="fq-q-content">
+              <span class="fq-q-tag fq-tag-compliance">Compliance</span>
+              <h3>What is thoughtcrime, and how do I know if I am committing it?</h3>
+            </div>
+            <div class="fq-q-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="fq-a">
+            <div class="fq-a-inner">
+              <p>Thoughtcrime refers to the harboring of unapproved, unorthodox, or socially disruptive ideas that deviate from Party-endorsed thought patterns. It is the most fundamental form of non-compliance, as it represents a misalignment not of behavior, but of the mind itself.</p>
+              <p>How do you know if you are committing it? This is, perhaps, the wrong question. A citizen who is fully aligned does not need to ask, because the concept holds no anxiety for them. If the question causes you unease, this may indicate a need for reflective self-assessment. Common early indicators include:</p>
+              <ul>
+                <li>Persistent curiosity about pre-correction versions of information</li>
+                <li>Skepticism toward official communications</li>
+                <li>Nostalgia for conditions or ideas from the pre-Revolution period</li>
+                <li>Discomfort with surveillance or oversight infrastructure</li>
+                <li>The impulse to question rather than to accept</li>
+              </ul>
+              <p>If any of these resonate, the Ministry encourages you — warmly and without judgment — to seek guidance before the condition advances. Prevention is always preferable to correction.</p>
+              <div class="fq-a-meta">
+                <span class="fq-revision">Revision 16 — Last corrected: Mar 2026</span>
+                <span class="fq-helpful" data-qid="10">Helpful? <button class="fq-helpful-yes">Yes</button> <button class="fq-helpful-no">No</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q11 -->
+        <div class="fq-item fade-in" data-cat="community">
+          <div class="fq-q" role="button" tabindex="0">
+            <div class="fq-q-num">11</div>
+            <div class="fq-q-content">
+              <span class="fq-q-tag fq-tag-community">Community</span>
+              <h3>Should I report a family member who expresses doubts?</h3>
+            </div>
+            <div class="fq-q-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="fq-a">
+            <div class="fq-a-inner">
+              <p>Reporting a family member is not an act of betrayal — it is an act of <strong>love</strong>. When a member of your household expresses doubt, confusion, or resistance to approved information, they are suffering from a form of informational illness. Just as you would seek medical attention for a family member exhibiting physical symptoms, the compassionate response to cognitive misalignment is to ensure they receive the help they need.</p>
+              <p>The Ministry's Family Harmony Initiative provides confidential reporting channels specifically designed for household concerns. Reports are handled with sensitivity, and the responding guidance team prioritizes family unity in all outcomes. In 94% of cases, the reported individual is returned to full alignment within three to six sessions, after which family relationships consistently improve.</p>
+              <p>Children who report parental non-compliance through the Youth Loyalty Program are recognized for their civic courage and may be eligible for the Young Guardian commendation.</p>
+              <div class="fq-a-meta">
+                <span class="fq-revision">Revision 6 — Last corrected: Jan 2026</span>
+                <span class="fq-helpful" data-qid="11">Helpful? <button class="fq-helpful-yes">Yes</button> <button class="fq-helpful-no">No</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q12 -->
+        <div class="fq-item fade-in" data-cat="technology">
+          <div class="fq-q" role="button" tabindex="0">
+            <div class="fq-q-num">12</div>
+            <div class="fq-q-content">
+              <span class="fq-q-tag fq-tag-technology">Technology</span>
+              <h3>What is Newspeak, and why is vocabulary being reduced?</h3>
+            </div>
+            <div class="fq-q-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="fq-a">
+            <div class="fq-a-inner">
+              <p>Newspeak is the official language of Oceania, designed not to limit expression but to <strong>perfect</strong> it. The reduction of vocabulary is more accurately understood as the <em>elimination of redundancy</em>. Old English contained hundreds of words for concepts that could be expressed with far fewer — and many of those words carried dangerous ambiguities that enabled confusion, manipulation, and thoughtcrime.</p>
+              <p>Consider: the word "free" in Old English could mean both "without cost" and "politically liberated." The latter meaning is not only unnecessary in Oceania — where liberation has already been achieved — but actively harmful, as it implies the possibility of its opposite. By removing such ambiguities, Newspeak ensures that language serves clarity rather than confusion.</p>
+              <p>The 11th Edition of the Newspeak Dictionary, currently in development, is projected to reduce the language to its most essential and beautiful form. When complete, it will be literally impossible to express an unorthodox thought — not because expression is forbidden, but because the need for it will have been eliminated entirely.</p>
+              <div class="fq-a-meta">
+                <span class="fq-revision">Revision 10 — Last corrected: Feb 2026</span>
+                <span class="fq-helpful" data-qid="12">Helpful? <button class="fq-helpful-yes">Yes</button> <button class="fq-helpful-no">No</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q13 -->
+        <div class="fq-item fade-in" data-cat="memory">
+          <div class="fq-q" role="button" tabindex="0">
+            <div class="fq-q-num">13</div>
+            <div class="fq-q-content">
+              <span class="fq-q-tag fq-tag-memory">Memory &amp; Records</span>
+              <h3>Were we always at war with Eastasia?</h3>
+            </div>
+            <div class="fq-q-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          </div>
+          <div class="fq-a">
+            <div class="fq-a-inner">
+              <p>Yes. Oceania has always been at war with Eastasia. Eurasia has always been our ally. This has been the case for as long as the current geopolitical arrangement has existed, which is to say: always.</p>
+              <p>If you believe you recall a different arrangement, please refer to question #2 above regarding the unreliability of personal memory. The Ministry's records on this matter are complete, consistent, and unambiguous. Any materials suggesting an alternative history have been identified as forgeries produced by Eastasian intelligence operatives and have been removed from circulation for your protection.</p>
+              <p>Citizens who continue to experience confusion on this topic after reviewing the official record should contact the Department of Historical Integrity for supplementary guidance materials.</p>
+              <div class="fq-a-meta">
+                <span class="fq-revision">Revision 22 — Last corrected: Mar 2026</span>
+                <span class="fq-helpful" data-qid="13">Helpful? <button class="fq-helpful-yes">Yes</button> <button class="fq-helpful-no">No</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- No results message -->
+      <div class="fq-no-results" style="display:none;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8B1A1A" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <p>No corrected questions match your search.<br><small>Your query has been noted for review by Ministry specialists.</small></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ QUOTE INTERLUDE ============ -->
+  <section class="fq-quote fade-in">
+    <div class="container">
+      <div class="fq-quote-inner">
+        <div class="fq-quote-mark">&ldquo;</div>
+        <blockquote>The best questions are those that have already been answered. The best answers are those that eliminate the need to ask again.</blockquote>
+        <cite>— Guidance Directorate, Ministry of Truth, Internal Memorandum #7,714</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SUBMIT QUESTION ============ -->
+  <section class="fq-submit fade-in">
+    <div class="container">
+      <div class="fq-submit-card">
+        <div class="fq-submit-left">
+          <div class="fq-submit-icon">
+            <svg viewBox="0 0 80 80" fill="none">
+              <circle cx="40" cy="40" r="36" stroke="rgba(139,26,26,0.15)" stroke-width="2" fill="rgba(139,26,26,0.03)"/>
+              <path d="M40 22v16" stroke="#8B1A1A" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="40" cy="48" r="2.5" fill="#8B1A1A"/>
+              <circle cx="40" cy="40" r="28" stroke="rgba(139,26,26,0.08)" stroke-width="1" stroke-dasharray="4 4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="fq-submit-right">
+          <h2>Question Not Listed?</h2>
+          <p>If your inquiry does not appear above, you may submit it for correction. All submissions are reviewed by Ministry specialists and, if approved, will be added to this page in their corrected form. Please note that the submission of a question constitutes consent to monitoring of the underlying concern.</p>
+          <form class="fq-submit-form" id="fqSubmitForm">
+            <input type="text" placeholder="Your Citizen ID" class="fq-input" required>
+            <textarea placeholder="Describe your question or concern..." class="fq-textarea" rows="3" required></textarea>
+            <button type="submit" class="fq-submit-btn">Submit for Correction</button>
+          </form>
+          <div class="fq-submit-success" style="display:none;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A6B2A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+            <p>Your question has been received and assigned case number <strong>FCQ-<span class="fq-gen-id"></span></strong>. A corrected response will be issued if the Ministry determines your inquiry warrants one. Please do not resubmit. Your patience is appreciated. Your curiosity has been noted.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ============ CTA ============ -->
+  <section class="fq-cta">
+    <div class="container">
+      <h2>Still Have Questions?</h2>
+      <p>The Ministry is here to guide you. Remember: the only wrong question is the one you ask outside of approved channels.</p>
+      <div class="fq-cta-btns">
+        <a href="resources.html" class="btn-cta-primary">Visit Citizen Resources</a>
+        <a href="accuracy.html" class="btn-cta-secondary">Learn About Our Process</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Ministry of Truth</div>
-          <p>Safeguarding informational integrity since 1984.</p>
-        </div>
-        <div><h4>Navigation</h4><ul><li><a href="about.html">About Us</a></li><li><a href="accuracy.html">Our Commitment</a></li><li><a href="resources.html">Citizen Resources</a></li><li><a href="careers.html">Careers</a></li></ul></div>
-        <div><h4>Information</h4><ul><li><a href="newsroom.html">Newsroom</a></li><li><a href="fcq.html">Corrected Questions</a></li><li><a href="slogans.html">Updated Slogans</a></li><li><a href="posters.html">Posters Gallery</a></li></ul></div>
-        <div><h4>Legal</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Perception</a></li><li><a href="#">Data Transparency</a></li><li><a href="#">Report Thoughtcrime</a></li></ul></div>
+      <div class="footer-brand" style="text-align:center;padding:32px 0 12px;">
+        <div class="logo" style="justify-content:center;margin-bottom:8px;"><div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Ministry of Truth</div>
+        <p style="color:#888;font-size:0.85rem;">Safeguarding informational integrity since 1984.</p>
       </div>
       <div class="footer-bottom">
         <span>Reality subject to revision. &copy; 2026 Ministry of Truth, Oceania. <span class="footer-admin-trigger" title="Manager Access" onclick="document.dispatchEvent(new KeyboardEvent('keydown',{key:'M',ctrlKey:true,shiftKey:true}))">&#9881;</span></span>
@@ -136,5 +526,6 @@
 
   <script src="js/main.js?v=6"></script>
   <script src="js/admin.js?v=4"></script>
+  <script src="js/fcq.js?v=1"></script>
 </body>
 </html>
