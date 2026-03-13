@@ -6,6 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Newsroom — Ministry of Truth</title>
   <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/newsroom.css?v=1">
 </head>
 <body>
 
@@ -28,128 +29,343 @@
     </div>
   </nav>
 
-  <section class="page-header">
-    <div class="container">
-      <div class="hero-badge">Official Communications</div>
+  <!-- ============ HERO ============ -->
+  <section class="nr-hero">
+    <canvas id="nrCanvas"></canvas>
+    <div class="nr-hero-inner">
+      <div class="hero-badge">Official Communications Bureau</div>
       <h1>Newsroom</h1>
-      <p>Official press releases and approved communications from the Ministry.</p>
+      <p class="nr-hero-sub">Authorized press releases, sanctioned updates, and approved communications distributed by the Ministry of Truth for the benefit of all citizens of Oceania.</p>
+      <div class="nr-hero-meta">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Updated in real-time</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Verified &amp; Approved</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Monitored Distribution</span>
+      </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- ============ STATS BAR ============ -->
+  <section class="nr-stats">
+    <div class="nr-stats-inner">
+      <div class="nr-stat">
+        <span class="nr-stat-num" data-count="847">0</span>
+        <span class="nr-stat-label">Releases Published</span>
+      </div>
+      <div class="nr-stat">
+        <span class="nr-stat-num" data-count="12" data-suffix="M+">0</span>
+        <span class="nr-stat-label">Citizens Informed</span>
+      </div>
+      <div class="nr-stat">
+        <span class="nr-stat-num" data-count="100" data-suffix="%">0</span>
+        <span class="nr-stat-label">Accuracy Rating</span>
+      </div>
+      <div class="nr-stat">
+        <span class="nr-stat-num" data-count="0" data-suffix="">0</span>
+        <span class="nr-stat-label">Retractions Necessary</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BREAKING TICKER ============ -->
+  <section class="nr-ticker-wrap">
+    <div class="nr-ticker-label">BREAKING</div>
+    <div class="nr-ticker">
+      <div class="nr-ticker-track">
+        <span>Ministry confirms chocolate ration has been increased to 20 grams</span>
+        <span>Eastasia has always been the enemy &mdash; any prior references were misprints</span>
+        <span>Telescreen compliance inspections to resume next quarter &mdash; all citizens must cooperate</span>
+        <span>Citizen satisfaction index reaches new all-time high of 99.7%</span>
+        <span>Thought alignment sessions now available on weekends at no additional cost</span>
+        <span>Ministry confirms chocolate ration has been increased to 20 grams</span>
+        <span>Eastasia has always been the enemy &mdash; any prior references were misprints</span>
+        <span>Telescreen compliance inspections to resume next quarter &mdash; all citizens must cooperate</span>
+        <span>Citizen satisfaction index reaches new all-time high of 99.7%</span>
+        <span>Thought alignment sessions now available on weekends at no additional cost</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED STORY ============ -->
+  <section class="nr-featured">
     <div class="container">
-      <div class="news-filters fade-in">
-        <button class="filter-btn active" data-year="all">All Releases</button>
-        <button class="filter-btn" data-year="2026">2026</button>
-        <button class="filter-btn" data-year="2025">2025</button>
-        <button class="filter-btn" data-year="2024">2024</button>
-        <button class="filter-btn" data-year="2023">2023</button>
+      <div class="nr-section-head fade-in">
+        <span class="nr-section-tag">Featured Release</span>
+        <h2>Latest Official Statement</h2>
+        <div class="nr-head-line"></div>
+      </div>
+      <div class="nr-featured-card fade-in" data-article="article-1">
+        <div class="nr-featured-left">
+          <div class="nr-featured-badge">PRIORITY BULLETIN</div>
+          <div class="nr-featured-icon">
+            <svg viewBox="0 0 80 80" fill="none">
+              <rect x="10" y="8" width="60" height="64" rx="4" stroke="rgba(139,26,26,0.5)" stroke-width="2" fill="rgba(139,26,26,0.05)"/>
+              <line x1="22" y1="24" x2="58" y2="24" stroke="rgba(139,26,26,0.3)" stroke-width="2"/>
+              <line x1="22" y1="34" x2="58" y2="34" stroke="rgba(139,26,26,0.3)" stroke-width="2"/>
+              <line x1="22" y1="44" x2="48" y2="44" stroke="rgba(139,26,26,0.3)" stroke-width="2"/>
+              <line x1="22" y1="54" x2="54" y2="54" stroke="rgba(139,26,26,0.3)" stroke-width="2"/>
+              <circle cx="60" cy="60" r="14" fill="#8B1A1A" opacity="0.15"/>
+              <path d="M55 60l4 4 8-8" stroke="#8B1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="nr-featured-right">
+          <div class="nr-featured-meta">
+            <span class="nr-tag nr-tag-official">Official</span>
+            <span class="nr-featured-date">March 8, 2026</span>
+            <span class="nr-featured-id">REF: MOT-2026-0308-A</span>
+          </div>
+          <h3>Ministry Announces Record-Setting Accuracy Improvements</h3>
+          <p>Q1 correction targets exceeded by 14%, with 14,207 archival records successfully realigned to current standards. The Department of Records reports this as the most productive quarter in Ministry history, marking a significant achievement in our ongoing mission to safeguard informational integrity across all sectors of Oceania.</p>
+          <div class="nr-featured-stats">
+            <div class="nr-mini-stat"><strong>14,207</strong><span>Records Corrected</span></div>
+            <div class="nr-mini-stat"><strong>114%</strong><span>Target Exceeded</span></div>
+            <div class="nr-mini-stat"><strong>0</strong><span>Errors Found</span></div>
+          </div>
+          <button class="btn-read-article" data-article="article-1">Read Full Statement <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FILTERS + NEWS GRID ============ -->
+  <section class="nr-archive">
+    <div class="container">
+      <div class="nr-section-head fade-in">
+        <span class="nr-section-tag">Press Archive</span>
+        <h2>All Official Releases</h2>
+        <div class="nr-head-line"></div>
       </div>
 
-      <div class="news-grid fade-in">
-        <div class="news-card" data-year="2026">
-          <div class="news-card-body">
-            <span class="news-tag">Official</span>
-            <div class="news-date">March 8, 2026</div>
+      <div class="nr-filter-bar fade-in">
+        <div class="nr-filter-group">
+          <span class="nr-filter-label">Year:</span>
+          <button class="nr-filter active" data-year="all">All</button>
+          <button class="nr-filter" data-year="2026">2026</button>
+          <button class="nr-filter" data-year="2025">2025</button>
+          <button class="nr-filter" data-year="2024">2024</button>
+          <button class="nr-filter" data-year="2023">2023</button>
+        </div>
+        <div class="nr-filter-group">
+          <span class="nr-filter-label">Category:</span>
+          <button class="nr-filter nr-cat-filter active" data-cat="all">All</button>
+          <button class="nr-filter nr-cat-filter" data-cat="official">Official</button>
+          <button class="nr-filter nr-cat-filter" data-cat="statistics">Statistics</button>
+          <button class="nr-filter nr-cat-filter" data-cat="technology">Technology</button>
+          <button class="nr-filter nr-cat-filter" data-cat="policy">Policy</button>
+          <button class="nr-filter nr-cat-filter" data-cat="security">Security</button>
+        </div>
+      </div>
+
+      <div class="nr-grid">
+
+        <div class="nr-card fade-in" data-year="2026" data-cat="official">
+          <div class="nr-card-accent"></div>
+          <div class="nr-card-body">
+            <div class="nr-card-top">
+              <span class="nr-tag nr-tag-official">Official</span>
+              <span class="nr-card-ref">MOT-2026-0308</span>
+            </div>
+            <div class="nr-card-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              March 8, 2026
+            </div>
             <h3>Ministry Announces Record-Setting Accuracy Improvements</h3>
             <p>Q1 correction targets exceeded by 14%, with 14,207 archival records successfully realigned to current standards.</p>
-            <a href="#" class="btn btn-outline btn-sm">Read Full Statement</a>
+            <button class="btn-read-article" data-article="article-1">Read Full Statement <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
           </div>
         </div>
 
-        <div class="news-card" data-year="2026">
-          <div class="news-card-body">
-            <span class="news-tag">Statistics</span>
-            <div class="news-date">January 22, 2026</div>
+        <div class="nr-card fade-in" data-year="2026" data-cat="statistics">
+          <div class="nr-card-accent"></div>
+          <div class="nr-card-body">
+            <div class="nr-card-top">
+              <span class="nr-tag nr-tag-statistics">Statistics</span>
+              <span class="nr-card-ref">MOT-2026-0122</span>
+            </div>
+            <div class="nr-card-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              January 22, 2026
+            </div>
             <h3>Correction Initiative Exceeds Annual Targets</h3>
             <p>The Department of Statistical Enhancement reports all numerical data across public databases has been optimized for the new fiscal year.</p>
-            <a href="#" class="btn btn-outline btn-sm">Read Full Statement</a>
+            <button class="btn-read-article" data-article="article-2">Read Full Statement <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
           </div>
         </div>
 
-        <div class="news-card" data-year="2025">
-          <div class="news-card-body">
-            <span class="news-tag">Sentiment</span>
-            <div class="news-date">November 14, 2025</div>
+        <div class="nr-card fade-in" data-year="2025" data-cat="official">
+          <div class="nr-card-accent"></div>
+          <div class="nr-card-body">
+            <div class="nr-card-top">
+              <span class="nr-tag nr-tag-official">Sentiment</span>
+              <span class="nr-card-ref">MOT-2025-1114</span>
+            </div>
+            <div class="nr-card-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              November 14, 2025
+            </div>
             <h3>Citizen Confidence Reaches Record High</h3>
             <p>Annual sentiment analysis confirms that public trust in Ministry operations has reached an unprecedented 99.2% approval rating.</p>
-            <a href="#" class="btn btn-outline btn-sm">Read Full Statement</a>
+            <button class="btn-read-article" data-article="article-3">Read Full Statement <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
           </div>
         </div>
 
-        <div class="news-card" data-year="2025">
-          <div class="news-card-body">
-            <span class="news-tag">Technology</span>
-            <div class="news-date">August 19, 2025</div>
+        <div class="nr-card fade-in" data-year="2025" data-cat="technology">
+          <div class="nr-card-accent"></div>
+          <div class="nr-card-body">
+            <div class="nr-card-top">
+              <span class="nr-tag nr-tag-technology">Technology</span>
+              <span class="nr-card-ref">MOT-2025-0819</span>
+            </div>
+            <div class="nr-card-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              August 19, 2025
+            </div>
             <h3>Predictive Monitoring System Goes Live</h3>
             <p>New AI-driven monitoring infrastructure now identifies potential narrative inconsistencies 4.7 hours before they reach public channels.</p>
-            <a href="#" class="btn btn-outline btn-sm">Read Full Statement</a>
+            <button class="btn-read-article" data-article="article-4">Read Full Statement <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
           </div>
         </div>
 
-        <div class="news-card" data-year="2025">
-          <div class="news-card-body">
-            <span class="news-tag">Policy</span>
-            <div class="news-date">May 3, 2025</div>
+        <div class="nr-card fade-in" data-year="2025" data-cat="policy">
+          <div class="nr-card-accent"></div>
+          <div class="nr-card-body">
+            <div class="nr-card-top">
+              <span class="nr-tag nr-tag-policy">Policy</span>
+              <span class="nr-card-ref">MOT-2025-0503</span>
+            </div>
+            <div class="nr-card-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              May 3, 2025
+            </div>
             <h3>Global Alignment Protocol Enters Phase III</h3>
             <p>Cross-territorial synchronization of informational standards now covers 97% of Oceanian communications networks.</p>
-            <a href="#" class="btn btn-outline btn-sm">Read Full Statement</a>
+            <button class="btn-read-article" data-article="article-5">Read Full Statement <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
           </div>
         </div>
 
-        <div class="news-card" data-year="2025">
-          <div class="news-card-body">
-            <span class="news-tag">Organization</span>
-            <div class="news-date">February 11, 2025</div>
+        <div class="nr-card fade-in" data-year="2025" data-cat="official">
+          <div class="nr-card-accent"></div>
+          <div class="nr-card-body">
+            <div class="nr-card-top">
+              <span class="nr-tag nr-tag-official">Organization</span>
+              <span class="nr-card-ref">MOT-2025-0211</span>
+            </div>
+            <div class="nr-card-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              February 11, 2025
+            </div>
             <h3>New Sub-Department of Digital Narrative Established</h3>
             <p>Expanding our capacity to monitor and correct digital communications with a dedicated team of 3,400 specialists.</p>
-            <a href="#" class="btn btn-outline btn-sm">Read Full Statement</a>
+            <button class="btn-read-article" data-article="article-6">Read Full Statement <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
           </div>
         </div>
 
-        <div class="news-card" data-year="2024">
-          <div class="news-card-body">
-            <span class="news-tag">Archive</span>
-            <div class="news-date">October 15, 2024</div>
+        <div class="nr-card fade-in" data-year="2024" data-cat="official">
+          <div class="nr-card-accent"></div>
+          <div class="nr-card-body">
+            <div class="nr-card-top">
+              <span class="nr-tag nr-tag-official">Archive</span>
+              <span class="nr-card-ref">MOT-2024-1015</span>
+            </div>
+            <div class="nr-card-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              October 15, 2024
+            </div>
             <h3>Complete Digitization of Pre-Revolution Records</h3>
-            <p>All pre-Revolution archival materials have been fully digitized and corrected, ensuring historical consistency.</p>
-            <a href="#" class="btn btn-outline btn-sm">Read Full Statement</a>
+            <p>All pre-Revolution archival materials have been fully digitized and corrected, ensuring historical consistency across all accessible archives.</p>
+            <button class="btn-read-article" data-article="article-7">Read Full Statement <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
           </div>
         </div>
 
-        <div class="news-card" data-year="2024">
-          <div class="news-card-body">
-            <span class="news-tag">Community</span>
-            <div class="news-date">April 2, 2024</div>
+        <div class="nr-card fade-in" data-year="2024" data-cat="official">
+          <div class="nr-card-accent"></div>
+          <div class="nr-card-body">
+            <div class="nr-card-top">
+              <span class="nr-tag nr-tag-official">Community</span>
+              <span class="nr-card-ref">MOT-2024-0402</span>
+            </div>
+            <div class="nr-card-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              April 2, 2024
+            </div>
             <h3>Youth Loyalty Program Enrollment Surpasses 2 Million</h3>
-            <p>The Junior Truth Ambassadors program has reached over 2 million active enrollees.</p>
-            <a href="#" class="btn btn-outline btn-sm">Read Full Statement</a>
+            <p>The Junior Truth Ambassadors program has reached over 2 million active enrollees, ensuring the next generation understands the value of informational unity.</p>
+            <button class="btn-read-article" data-article="article-8">Read Full Statement <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
           </div>
         </div>
 
-        <div class="news-card" data-year="2023">
-          <div class="news-card-body">
-            <span class="news-tag">Security</span>
-            <div class="news-date">September 28, 2023</div>
+        <div class="nr-card fade-in" data-year="2023" data-cat="security">
+          <div class="nr-card-accent"></div>
+          <div class="nr-card-body">
+            <div class="nr-card-top">
+              <span class="nr-tag nr-tag-security">Security</span>
+              <span class="nr-card-ref">MOT-2023-0928</span>
+            </div>
+            <div class="nr-card-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              September 28, 2023
+            </div>
             <h3>Enhanced Security Protocols for Archival Systems</h3>
-            <p>New security measures ensure obsolete data remains permanently inaccessible, protecting citizens from outdated information.</p>
-            <a href="#" class="btn btn-outline btn-sm">Read Full Statement</a>
+            <p>New security measures ensure obsolete data remains permanently inaccessible, protecting citizens from the confusion of outdated information.</p>
+            <button class="btn-read-article" data-article="article-9">Read Full Statement <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
           </div>
         </div>
+
+      </div>
+
+      <div class="nr-no-results" style="display:none;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8B1A1A" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <p>No releases match the selected criteria.<br><small>This is expected. Some records have been reclassified.</small></p>
       </div>
     </div>
   </section>
 
+  <!-- ============ SUBSCRIBE CTA ============ -->
+  <section class="nr-subscribe fade-in">
+    <div class="container">
+      <div class="nr-sub-inner">
+        <div class="nr-sub-text">
+          <h2>Stay Informed. Stay Aligned.</h2>
+          <p>Subscribe to receive approved updates directly from the Ministry. All communications are pre-verified for your convenience. Unsubscription is not available at this time.</p>
+        </div>
+        <div class="nr-sub-form">
+          <input type="text" placeholder="Citizen ID Number" class="nr-sub-input">
+          <button class="nr-sub-btn">Subscribe</button>
+        </div>
+        <div class="nr-sub-note">By subscribing, you acknowledge that all distributed information is final and not subject to personal interpretation.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="nr-cta">
+    <div class="container">
+      <h2>Have Information to Report?</h2>
+      <p>If you encounter unapproved narratives, inconsistencies in public discourse, or unauthorized historical claims, it is your civic duty to notify the Ministry immediately.</p>
+      <div class="nr-cta-btns">
+        <a href="resources.html" class="btn-cta-primary">Report a Discrepancy</a>
+        <a href="accuracy.html" class="btn-cta-secondary">Learn About Our Process</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ARTICLE OVERLAY (Full Press Release Reader) ============ -->
+  <div class="nr-article-overlay" id="articleOverlay">
+    <div class="nr-article-container">
+      <button class="nr-article-close">&times;</button>
+
+      <div class="nr-article-content" id="articleContent">
+        <!-- Dynamically filled by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Ministry of Truth</div>
-          <p>Safeguarding informational integrity since 1984.</p>
-        </div>
-        <div><h4>Navigation</h4><ul><li><a href="about.html">About Us</a></li><li><a href="accuracy.html">Our Commitment</a></li><li><a href="resources.html">Citizen Resources</a></li><li><a href="careers.html">Careers</a></li></ul></div>
-        <div><h4>Information</h4><ul><li><a href="newsroom.html">Newsroom</a></li><li><a href="fcq.html">Corrected Questions</a></li><li><a href="slogans.html">Updated Slogans</a></li><li><a href="posters.html">Posters Gallery</a></li></ul></div>
-        <div><h4>Legal</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Perception</a></li><li><a href="#">Data Transparency</a></li><li><a href="#">Report Thoughtcrime</a></li></ul></div>
+      <div class="footer-brand" style="text-align:center;padding:32px 0 12px;">
+        <div class="logo" style="justify-content:center;margin-bottom:8px;"><div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Ministry of Truth</div>
+        <p style="color:#888;font-size:0.85rem;">Safeguarding informational integrity since 1984.</p>
       </div>
       <div class="footer-bottom">
         <span>Reality subject to revision. &copy; 2026 Ministry of Truth, Oceania. <span class="footer-admin-trigger" title="Manager Access" onclick="document.dispatchEvent(new KeyboardEvent('keydown',{key:'M',ctrlKey:true,shiftKey:true}))">&#9881;</span></span>
@@ -162,5 +378,6 @@
 
   <script src="js/main.js?v=6"></script>
   <script src="js/admin.js?v=4"></script>
+  <script src="js/newsroom.js?v=1"></script>
 </body>
 </html>
