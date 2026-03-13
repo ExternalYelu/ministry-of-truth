@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ministry of Truth — Safeguarding Informational Integrity</title>
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/home.css?v=5">
 </head>
 <body>
 
@@ -27,16 +28,24 @@
     </div>
   </nav>
 
-  <section class="hero">
-    <div class="hero-badge">Official Government Communication Platform</div>
-    <h1><span class="hero-slogan">Truth Is What We Say It Is.</span></h1>
-    <p>The Ministry of Truth exists to ensure every citizen receives clear, consistent, and approved information. Your trust is our foundation. Your compliance is appreciated.</p>
-    <div class="hero-buttons">
-      <a href="accuracy.html" class="btn btn-primary btn-lg">Learn the Truth</a>
-      <a href="resources.html" class="btn btn-ghost btn-lg">Report a Discrepancy</a>
+  <!-- ===== HERO — dark red gradient with animated grid ===== -->
+  <section class="hero-home">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-home-inner">
+      <div class="hero-badge">Official Government Communication Platform</div>
+      <h1><span class="hero-slogan">Truth Is What We Say It Is.</span></h1>
+      <p class="hero-sub">The Ministry of Truth exists to ensure every citizen receives clear, consistent, and approved information. Your trust is our foundation. Your compliance is appreciated.</p>
+      <div class="hero-buttons">
+        <a href="accuracy.html" class="btn btn-hero-primary btn-lg">Learn the Truth</a>
+        <a href="resources.html" class="btn btn-hero-ghost btn-lg">Report a Discrepancy</a>
+      </div>
+      <div class="hero-scroll-hint">
+        <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="6 9 12 15 18 9" stroke="rgba(255,255,255,0.5)" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
     </div>
   </section>
 
+  <!-- ===== TICKER ===== -->
   <div class="ticker-bar">
     <div class="ticker-track">
       <div class="ticker-item"><span class="ticker-dot"></span> Correction Issued — Yesterday's production data updated.</div>
@@ -54,6 +63,34 @@
     </div>
   </div>
 
+  <!-- ===== LIVE STATS BAR ===== -->
+  <section class="stats-bar fade-in">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-item">
+          <span class="stat-value" data-count="14207" data-suffix="">0</span>
+          <span class="stat-label">Records Corrected This Quarter</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value" data-count="99" data-suffix="%">0</span>
+          <span class="stat-label">Citizen Confidence Index</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value" data-count="42" data-suffix="">0</span>
+          <span class="stat-label">Years of Dedicated Service</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value" data-count="12" data-suffix="M+">0</span>
+          <span class="stat-label">Citizens Protected Daily</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MISSION SECTION ===== -->
   <section class="section">
     <div class="container text-center">
       <div class="section-subtitle">Our Mission</div>
@@ -90,47 +127,115 @@
     </div>
   </section>
 
+  <!-- ===== HOW WE SERVE — icon row ===== -->
   <section class="section section-alt">
-    <div class="container">
-      <div class="psa-banner fade-in">
-        <div class="psa-icon">
-          <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+    <div class="container text-center">
+      <div class="section-subtitle">How We Serve</div>
+      <div class="accent-line"></div>
+      <h2>Protecting Your Understanding</h2>
+      <p class="section-desc">Our departments operate around the clock so that you never have to experience the discomfort of contradictory information.</p>
+
+      <div class="serve-grid fade-in">
+        <div class="serve-card">
+          <div class="serve-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>Record Correction</h3>
+          <p>Historical data aligned to current standards in real time. Outdated facts are safely archived.</p>
         </div>
-        <div class="psa-content">
+        <div class="serve-card">
+          <div class="serve-icon">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Narrative Monitoring</h3>
+          <p>Continuous oversight of public-facing information to prevent the spread of unverified claims.</p>
+        </div>
+        <div class="serve-card">
+          <div class="serve-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Data Security</h3>
+          <p>Obsolete information is permanently sealed, protecting citizens from confusion and cognitive dissonance.</p>
+        </div>
+        <div class="serve-card">
+          <div class="serve-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Citizen Guidance</h3>
+          <p>Supportive programs to help citizens whose memories have fallen out of alignment with the approved record.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PSA BANNER ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="psa-banner-home fade-in">
+        <div class="psa-left">
+          <div class="psa-eyecon">
+            <svg viewBox="0 0 80 80">
+              <circle cx="40" cy="40" r="36" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="2"/>
+              <circle cx="40" cy="40" r="24" stroke="rgba(255,255,255,0.15)" fill="none" stroke-width="1.5"/>
+              <circle class="psa-eye-pulse" cx="40" cy="40" r="12" fill="rgba(255,255,255,0.9)"/>
+              <circle cx="40" cy="40" r="5" fill="#5C0E0E"/>
+            </svg>
+          </div>
+        </div>
+        <div class="psa-right">
+          <span class="psa-tag">Public Service Announcement</span>
           <h3>Noticed an Inconsistency?</h3>
-          <p>If you observe any discrepancy between your personal recollection and the current official record, please notify the Ministry immediately. Your diligence strengthens our collective accuracy.</p>
+          <p>If you observe any discrepancy between your personal recollection and the current official record, please notify the Ministry immediately. Your diligence strengthens our collective accuracy. Remember: doubting the record is the first step toward thoughtcrime.</p>
           <a href="resources.html" class="btn btn-primary">Submit Memory Adjustment</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-subtitle text-center">Latest Communication</div>
+  <!-- ===== THREE PILLARS — visual diagram ===== -->
+  <section class="section section-dark">
+    <div class="container text-center">
+      <div class="section-subtitle" style="color:var(--red-light)">The Three Pillars of Oceania</div>
       <div class="accent-line"></div>
-      <h2 class="text-center">From the Newsroom</h2>
-      <div style="max-width:700px; margin: 36px auto 0;">
-        <div class="press-card fade-in">
-          <div class="press-date">March 8, 2026</div>
-          <h3>Ministry Announces Record-Setting Accuracy Improvements for Q1</h3>
-          <p>In an unprecedented achievement, the Department of Historical Integrity has completed the realignment of 14,207 archival records, ensuring all publicly accessible data reflects current institutional standards. Citizen confidence metrics have reached an all-time high.</p>
-          <a href="newsroom.html" class="btn btn-outline btn-sm">Read Full Statement</a>
+      <h2>War Is Peace. Freedom Is Slavery. Ignorance Is Strength.</h2>
+      <p class="section-desc">These foundational truths guide every decision, every correction, and every act of service the Ministry performs on behalf of its citizens.</p>
+      <div class="pillars-grid fade-in">
+        <div class="pillar-card">
+          <div class="pillar-num">I</div>
+          <h3>War Is Peace</h3>
+          <p>Perpetual conflict ensures perpetual stability. Through unified purpose against a common adversary, society finds harmony.</p>
         </div>
+        <div class="pillar-card">
+          <div class="pillar-num">II</div>
+          <h3>Freedom Is Slavery</h3>
+          <p>Unchecked freedom leads to chaos. True liberation comes from surrendering individual doubt to collective certainty.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-num">III</div>
+          <h3>Ignorance Is Strength</h3>
+          <p>The less a citizen questions, the stronger the state becomes. Knowledge curated by the Ministry is the only knowledge that matters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section fade-in">
+    <div class="container text-center">
+      <h2>Your Compliance Is Appreciated</h2>
+      <p>Join millions of citizens who trust the Ministry of Truth for clear, consistent, and approved information. Together, we maintain the integrity of our shared reality.</p>
+      <div class="hero-buttons" style="margin-top:32px">
+        <a href="resources.html" class="btn btn-hero-primary btn-lg">Access Citizen Resources</a>
+        <a href="careers.html" class="btn btn-hero-ghost btn-lg">Join Our Team</a>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Ministry of Truth</div>
+      <div class="footer-brand" style="text-align:center;margin-bottom:20px;">
+          <div class="logo" style="justify-content:center;margin-bottom:8px;"><div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Ministry of Truth</div>
           <p>Safeguarding informational integrity since 1984. Oceania's trusted source for approved knowledge.</p>
-        </div>
-        <div><h4>Navigation</h4><ul><li><a href="about.html">About Us</a></li><li><a href="accuracy.html">Our Commitment</a></li><li><a href="resources.html">Citizen Resources</a></li><li><a href="careers.html">Careers</a></li></ul></div>
-        <div><h4>Information</h4><ul><li><a href="newsroom.html">Newsroom</a></li><li><a href="fcq.html">Corrected Questions</a></li><li><a href="slogans.html">Updated Slogans</a></li><li><a href="posters.html">Posters Gallery</a></li></ul></div>
-        <div><h4>Legal</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Perception</a></li><li><a href="#">Data Transparency</a></li><li><a href="#">Report Thoughtcrime</a></li></ul></div>
       </div>
       <div class="footer-bottom">
         <span>Reality subject to revision. &copy; 2026 Ministry of Truth, Oceania. <span class="footer-admin-trigger" title="Manager Access (Ctrl+Shift+M)" onclick="document.dispatchEvent(new KeyboardEvent('keydown',{key:'M',ctrlKey:true,shiftKey:true}))">&#9881;</span></span>
@@ -141,7 +246,8 @@
 
   <div class="sync-popup"><span class="sync-dot"></span>Your session has been synchronized.<button class="sync-close">&times;</button></div>
 
-  <script src="js/main.js?v=2"></script>
-  <script src="js/admin.js?v=2"></script>
+  <script src="js/main.js?v=6"></script>
+  <script src="js/admin.js?v=4"></script>
+  <script src="js/home.js?v=4"></script>
 </body>
 </html>

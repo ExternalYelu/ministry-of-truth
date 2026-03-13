@@ -3,11 +3,7 @@
    Oceania Department of Information Integrity
    ============================================= */
 
-/* ---------- Gate redirect (skip on gate.html itself) ---------- */
-if (!window.location.pathname.endsWith('gate.html') &&
-    localStorage.getItem('minitrue_clearance') !== 'granted') {
-  window.location.replace('gate.html');
-}
+/* ---------- Gate redirect — disabled ---------- */
 
 document.addEventListener('DOMContentLoaded', () => {
 
