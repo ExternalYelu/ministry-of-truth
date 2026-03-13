@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>About Us — Ministry of Truth</title>
   <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/about.css?v=1">
 </head>
 <body>
 
@@ -27,138 +29,298 @@
     </div>
   </nav>
 
-  <section class="page-header">
-    <div class="container">
+  <!-- ===== HERO ===== -->
+  <section class="about-hero">
+    <canvas id="aboutCanvas"></canvas>
+    <div class="about-hero-inner">
       <div class="hero-badge">Institutional Overview</div>
       <h1>About the Ministry</h1>
-      <p>Established to ensure the integrity of all information reaching the citizens of Oceania.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-subtitle text-center">Who We Are</div>
-      <div class="accent-line"></div>
-      <h2 class="text-center">Institutional Overview</h2>
-      <div style="max-width:740px;margin:24px auto 0;">
-        <p style="color:var(--gray-500);line-height:1.8;margin-bottom:16px;">Founded in 1984, the Ministry of Truth (Minitrue) serves as Oceania's central authority for informational integrity. Our mandate is the preservation, refinement, and distribution of all approved knowledge.</p>
-        <p style="color:var(--gray-500);line-height:1.8;margin-bottom:16px;">We employ over 42,000 dedicated professionals across four specialized departments, each working tirelessly to ensure that public records, news, education, and entertainment reflect the most current standards of accuracy.</p>
-        <p style="color:var(--gray-500);line-height:1.8;">Our work is not merely administrative — it is essential to the stability and unity of our great society.</p>
+      <p>Established to ensure the integrity of all information reaching the citizens of Oceania. Since 1984, we have served as the unwavering guardian of truth.</p>
+      <div class="hero-scroll-hint">
+        <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="6 9 12 15 18 9" stroke="rgba(255,255,255,0.5)" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
       </div>
     </div>
   </section>
 
+  <!-- ===== STATS BAR ===== -->
+  <section class="about-stats fade-in">
+    <div class="container">
+      <div class="about-stats-row">
+        <div class="about-stat">
+          <span class="about-stat-num" data-count="42">0</span>
+          <span class="about-stat-label">Years of Service</span>
+        </div>
+        <div class="about-stat-div"></div>
+        <div class="about-stat">
+          <span class="about-stat-num" data-count="42000" data-suffix="+">0</span>
+          <span class="about-stat-label">Dedicated Professionals</span>
+        </div>
+        <div class="about-stat-div"></div>
+        <div class="about-stat">
+          <span class="about-stat-num" data-count="4">0</span>
+          <span class="about-stat-label">Specialized Departments</span>
+        </div>
+        <div class="about-stat-div"></div>
+        <div class="about-stat">
+          <span class="about-stat-num" data-count="100" data-suffix="%">0</span>
+          <span class="about-stat-label">Citizen Confidence</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHO WE ARE ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="about-split fade-in">
+        <div class="about-split-text">
+          <div class="section-subtitle">Who We Are</div>
+          <div class="accent-line" style="margin-left:0"></div>
+          <h2>Institutional Overview</h2>
+          <p>Founded in 1984, the Ministry of Truth (Minitrue) serves as Oceania's central authority for informational integrity. Our mandate is the preservation, refinement, and distribution of all approved knowledge.</p>
+          <p>We employ over 42,000 dedicated professionals across four specialized departments, each working tirelessly to ensure that public records, news, education, and entertainment reflect the most current standards of accuracy.</p>
+          <p>Our work is not merely administrative — it is essential to the stability and unity of our great society. Every correction we make, every record we align, strengthens the foundation upon which Oceania stands.</p>
+        </div>
+        <div class="about-split-visual">
+          <div class="about-emblem">
+            <svg viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="90" fill="none" stroke="var(--red)" stroke-width="1" opacity="0.15"/>
+              <circle cx="100" cy="100" r="70" fill="none" stroke="var(--red)" stroke-width="1" opacity="0.1"/>
+              <circle cx="100" cy="100" r="50" fill="none" stroke="var(--red)" stroke-width="1.5" opacity="0.2"/>
+              <circle class="emblem-pulse" cx="100" cy="100" r="30" fill="var(--red-glow)"/>
+              <path d="M100 70L80 95l10 0 -5 35 30-30-12 0z" fill="var(--red)" opacity="0.7"/>
+            </svg>
+            <div class="emblem-ring emblem-ring-1"></div>
+            <div class="emblem-ring emblem-ring-2"></div>
+            <div class="emblem-ring emblem-ring-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOUNDING PRINCIPLES ===== -->
+  <section class="section section-alt">
+    <div class="container text-center">
+      <div class="section-subtitle">Founding Principles</div>
+      <div class="accent-line"></div>
+      <h2>The Pillars of Our Mission</h2>
+      <p class="section-desc">Every action taken by the Ministry is guided by three immutable principles, established at our founding and upheld without exception.</p>
+
+      <div class="principles-grid fade-in">
+        <div class="principle-card">
+          <div class="principle-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="principle-num">01</div>
+          <h3>Protect the Narrative</h3>
+          <p>A unified narrative is the bedrock of social order. Contradictions, however minor, threaten the stability of the collective understanding. It is our duty to identify and resolve such discrepancies before they propagate.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="principle-num">02</div>
+          <h3>Maintain Alignment</h3>
+          <p>Every citizen deserves access to the same truth. Discrepancies between personal memory and the official record are not the fault of the individual — they are inefficiencies we are here to correct.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-icon">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div class="principle-num">03</div>
+          <h3>Serve With Vigilance</h3>
+          <p>Misinformation is not a passive threat — it is an active force that must be countered continuously. Our work never stops, because the enemies of truth never rest.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ORGANIZATIONAL STRUCTURE ===== -->
   <section class="section section-dark">
     <div class="container text-center">
-      <div class="section-subtitle">Our Structure</div>
+      <div class="section-subtitle" style="color:var(--red-light)">Our Structure</div>
       <div class="accent-line"></div>
       <h2>Organizational Departments</h2>
-      <p class="section-desc">The Ministry operates through four highly specialized departments, each critical to our mission.</p>
+      <p class="section-desc">The Ministry operates through four highly specialized departments, each critical to our mission of safeguarding informational integrity.</p>
 
-      <div class="org-grid fade-in">
-        <div class="org-card org-minister">
-          <div class="org-icon">
+      <!-- Minister at top -->
+      <div class="org-minister-block fade-in">
+        <div class="org-card-new org-minister-new">
+          <div class="org-icon-new">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/><path d="M12 2v2M8 4l1 1M16 4l-1 1"/></svg>
           </div>
           <h3>The Minister</h3>
-          <p>Supreme authority over all informational matters. Appointed directly by the Party.</p>
+          <p>Supreme authority over all informational matters. Appointed directly by the Party. All departmental directives flow from this office.</p>
         </div>
-        <div class="org-card">
-          <div class="org-icon">
+        <div class="org-connector">
+          <svg viewBox="0 0 200 40" preserveAspectRatio="none"><path d="M100 0 V20 M100 20 H20 M100 20 H180 M20 20 V40 M66 20 V40 M133 20 V40 M180 20 V40" stroke="rgba(255,255,255,0.12)" fill="none" stroke-width="2"/></svg>
+        </div>
+      </div>
+
+      <!-- 4 Department cards -->
+      <div class="org-dept-grid fade-in">
+        <div class="org-card-new">
+          <div class="org-icon-new">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
           <h3>Department of Records</h3>
           <p>Manages the correction and alignment of all historical documents, ensuring consistency with current standards.</p>
+          <div class="org-hover-detail">3,200 analysts process over 10,000 corrections daily across all archival systems.</div>
         </div>
-        <div class="org-card">
-          <div class="org-icon">
+        <div class="org-card-new">
+          <div class="org-icon-new">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
           </div>
-          <h3>Department of Historical Integrity</h3>
-          <p>Ensures that all historical narratives reflect the approved interpretation of events.</p>
+          <h3>Dept. of Historical Integrity</h3>
+          <p>Ensures that all historical narratives reflect the approved interpretation of events past and present.</p>
+          <div class="org-hover-detail">Maintains a living archive of 14 million records, updated in real time.</div>
         </div>
-        <div class="org-card">
-          <div class="org-icon">
+        <div class="org-card-new">
+          <div class="org-icon-new">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
           </div>
-          <h3>Department of Statistical Enhancement</h3>
-          <p>Optimizes all numerical data, production figures, and metrics to reflect improvements and progress.</p>
+          <h3>Dept. of Statistical Enhancement</h3>
+          <p>Optimizes all numerical data, production figures, and metrics to reflect improvements and continued progress.</p>
+          <div class="org-hover-detail">Every published figure passes through three tiers of enhancement before release.</div>
         </div>
-        <div class="org-card">
-          <div class="org-icon">
+        <div class="org-card-new">
+          <div class="org-icon-new">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           </div>
-          <h3>Department of Public Sentiment</h3>
+          <h3>Dept. of Public Sentiment</h3>
           <p>Monitors and guides public perception, ensuring alignment between citizen attitudes and Party objectives.</p>
+          <div class="org-hover-detail">Operates sentiment-tracking networks across all 12 Oceanian sectors.</div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ===== QUOTE INTERLUDE ===== -->
+  <section class="about-quote-section fade-in">
+    <div class="container text-center">
+      <div class="about-quote-mark">&ldquo;</div>
+      <blockquote class="about-big-quote">The past was erased, the erasure was forgotten, the lie became the truth.</blockquote>
+      <div class="about-quote-attr">— Foundational Text, Ministry of Truth Archives</div>
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE ===== -->
   <section class="section">
     <div class="container">
       <div class="section-subtitle text-center">Our Journey</div>
       <div class="accent-line"></div>
       <h2 class="text-center">Timeline of Progress</h2>
-      <p class="section-desc text-center">Key milestones in our ongoing mission to safeguard informational integrity.</p>
+      <p class="section-desc text-center">Key milestones in our ongoing mission to safeguard informational integrity across Oceania.</p>
 
-      <div class="timeline fade-in">
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">1984</div>
+      <div class="timeline-v2 fade-in">
+        <div class="tl2-line"></div>
+
+        <div class="tl2-item tl2-left">
+          <div class="tl2-dot"></div>
+          <div class="tl2-card">
+            <div class="tl2-year">1984</div>
             <h3>Ministry Established</h3>
-            <p>The Ministry of Truth is formally established as the central authority for informational integrity across all of Oceania.</p>
+            <p>The Ministry of Truth is formally established as the central authority for informational integrity across all of Oceania. Big Brother declares informational alignment the highest civic duty.</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">1990</div>
+
+        <div class="tl2-item tl2-right">
+          <div class="tl2-dot"></div>
+          <div class="tl2-card">
+            <div class="tl2-year">1990</div>
             <h3>Full Archival Digitization</h3>
-            <p>Complete digitization of all pre-Revolution records, enabling more efficient correction and alignment processes.</p>
+            <p>Complete digitization of all pre-Revolution records, enabling more efficient correction and alignment processes. Physical archives are sealed permanently.</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2002</div>
+
+        <div class="tl2-item tl2-left">
+          <div class="tl2-dot"></div>
+          <div class="tl2-card">
+            <div class="tl2-year">2002</div>
             <h3>Predictive Narrative Framework</h3>
-            <p>Introduction of predictive narrative alignment technology, allowing corrections to be implemented before inconsistencies become public.</p>
+            <p>Introduction of predictive narrative alignment technology, allowing corrections to be implemented before inconsistencies become public. A landmark in proactive truth management.</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2010</div>
+
+        <div class="tl2-item tl2-right">
+          <div class="tl2-dot"></div>
+          <div class="tl2-card">
+            <div class="tl2-year">2010</div>
             <h3>Citizen Participation Initiative</h3>
-            <p>Launch of the public reporting system, empowering citizens to identify and report informational discrepancies.</p>
+            <p>Launch of the public reporting system, empowering citizens to identify and report informational discrepancies. Over 1.2 million reports submitted in the first year alone.</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2020</div>
+
+        <div class="tl2-item tl2-left">
+          <div class="tl2-dot"></div>
+          <div class="tl2-card">
+            <div class="tl2-year">2020</div>
             <h3>Global Alignment Protocol</h3>
-            <p>Implementation of the Global Alignment Protocol, synchronizing informational standards across all Oceanian territories.</p>
+            <p>Implementation of the Global Alignment Protocol, synchronizing informational standards across all Oceanian territories. Cross-border narrative discrepancies eliminated.</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2025</div>
+
+        <div class="tl2-item tl2-right">
+          <div class="tl2-dot"></div>
+          <div class="tl2-card">
+            <div class="tl2-year">2025</div>
             <h3>Real-Time Monitoring</h3>
-            <p>Deployment of real-time narrative monitoring across all public channels, achieving 99.97% consistency.</p>
+            <p>Deployment of real-time narrative monitoring across all public channels, achieving 99.97% consistency. The remaining 0.03% is under active investigation.</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2026</div>
+
+        <div class="tl2-item tl2-left">
+          <div class="tl2-dot"></div>
+          <div class="tl2-card">
+            <div class="tl2-year">2026</div>
             <h3>Accuracy Reform Act</h3>
-            <p>Landmark legislation granting the Ministry expanded authority to proactively correct emerging informational discrepancies.</p>
+            <p>Landmark legislation granting the Ministry expanded authority to proactively correct emerging informational discrepancies. A new era of truth begins.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KEY FIGURES ===== -->
+  <section class="section section-alt">
+    <div class="container text-center">
+      <div class="section-subtitle">By the Numbers</div>
+      <div class="accent-line"></div>
+      <h2>Our Impact in Perspective</h2>
+      <div class="impact-grid fade-in">
+        <div class="impact-card">
+          <div class="impact-num" data-count="14207">0</div>
+          <div class="impact-label">Records corrected this quarter</div>
+          <div class="impact-bar"><div class="impact-fill" data-width="94"></div></div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-num" data-count="847">0</div>
+          <div class="impact-label">Cognitive alignment sessions conducted</div>
+          <div class="impact-bar"><div class="impact-fill" data-width="72"></div></div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-num" data-count="2100000" data-suffix="+">0</div>
+          <div class="impact-label">Youth Loyalty Program enrollees</div>
+          <div class="impact-bar"><div class="impact-fill" data-width="88"></div></div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-num" data-count="99" data-suffix=".97%">0</div>
+          <div class="impact-label">Narrative consistency achieved</div>
+          <div class="impact-bar"><div class="impact-fill" data-width="99"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="about-cta fade-in">
+    <div class="container text-center">
+      <h2>The Ministry Serves You</h2>
+      <p>Every correction, every alignment, every improvement we make is in service of your right to live in a world free from the burden of contradictory information.</p>
+      <div style="margin-top:32px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="accuracy.html" class="btn btn-hero-primary btn-lg">Our Commitment to Accuracy</a>
+        <a href="careers.html" class="btn btn-hero-ghost btn-lg">Join Our Mission</a>
       </div>
     </div>
   </section>
@@ -185,5 +347,6 @@
 
   <script src="js/main.js?v=6"></script>
   <script src="js/admin.js?v=4"></script>
+  <script src="js/about.js?v=1"></script>
 </body>
 </html>
