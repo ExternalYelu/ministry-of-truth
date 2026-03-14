@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>About Us — Ministry of Truth</title>
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=5">
   <link rel="stylesheet" href="css/about.css?v=1">
 </head>
 <body>
@@ -88,7 +88,10 @@
               <circle cx="100" cy="100" r="70" fill="none" stroke="var(--red)" stroke-width="1" opacity="0.1"/>
               <circle cx="100" cy="100" r="50" fill="none" stroke="var(--red)" stroke-width="1.5" opacity="0.2"/>
               <circle class="emblem-pulse" cx="100" cy="100" r="30" fill="var(--red-glow)"/>
-              <path d="M100 70L80 95l10 0 -5 35 30-30-12 0z" fill="var(--red)" opacity="0.7"/>
+              <!-- All-seeing eye -->
+              <path d="M60 100 Q80 78 100 78 Q120 78 140 100 Q120 122 100 122 Q80 122 60 100Z" fill="none" stroke="var(--red)" stroke-width="2.5" opacity="0.8"/>
+              <circle cx="100" cy="100" r="10" fill="var(--red)" opacity="0.8"/>
+              <circle cx="100" cy="100" r="4" fill="#fff" opacity="0.9"/>
             </svg>
             <div class="emblem-ring emblem-ring-1"></div>
             <div class="emblem-ring emblem-ring-2"></div>
@@ -193,15 +196,6 @@
           <div class="org-hover-detail">Operates sentiment-tracking networks across all 12 Oceanian sectors.</div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== QUOTE INTERLUDE ===== -->
-  <section class="about-quote-section fade-in">
-    <div class="container text-center">
-      <div class="about-quote-mark">&ldquo;</div>
-      <blockquote class="about-big-quote">The past was erased, the erasure was forgotten, the lie became the truth.</blockquote>
-      <div class="about-quote-attr">— Foundational Text, Ministry of Truth Archives</div>
     </div>
   </section>
 
@@ -345,8 +339,8 @@
 
   <div class="sync-popup"><span class="sync-dot"></span>Your session has been synchronized.<button class="sync-close">&times;</button></div>
 
-  <script src="js/main.js?v=6"></script>
+  <script src="js/main.js?v=8"></script>
   <script src="js/admin.js?v=4"></script>
-  <script src="js/about.js?v=1"></script>
+  <script src="js/about.js?v=2"></script>
 </body>
 </html>

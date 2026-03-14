@@ -1,0 +1,142 @@
+/* ========================================
+   CITIZEN LOGIN – PAGE STYLES
+   ======================================== */
+
+/* ---------- LOGIN PAGE ---------- */
+.lg-page{
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:linear-gradient(160deg,#0d0808 0%,#1a0000 40%,#2a0505 100%);
+  padding:80px 24px 40px;position:relative;overflow:hidden;
+}
+#lgCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+
+/* ---------- LOGIN CARD ---------- */
+.lg-card{
+  position:relative;z-index:2;width:100%;max-width:400px;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;padding:40px 32px;backdrop-filter:blur(12px);
+  transition:opacity .5s,transform .5s;
+}
+.lg-card.hidden{opacity:0;transform:scale(.95);pointer-events:none;position:absolute;}
+.lg-logo{width:48px;height:48px;margin:0 auto 18px;color:#8B1A1A;}
+.lg-logo svg{width:100%;height:100%;}
+.lg-card h2{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;color:#fff;text-align:center;margin-bottom:4px;}
+.lg-sub{font-size:.85rem;color:rgba(255,255,255,.45);text-align:center;margin-bottom:28px;}
+
+.lg-field{margin-bottom:18px;}
+.lg-field label{display:block;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:6px;font-family:'Inter',sans-serif;font-weight:600;}
+.lg-field input{
+  width:100%;padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.05);color:#fff;font-size:.92rem;font-family:'Inter',sans-serif;
+  outline:none;transition:border-color .2s;
+}
+.lg-field input:focus{border-color:rgba(139,26,26,.6);}
+.lg-field input::placeholder{color:rgba(255,255,255,.2);}
+
+.lg-btn{
+  width:100%;padding:13px;border:none;border-radius:8px;
+  background:linear-gradient(135deg,#8B1A1A,#5C0E0E);color:#fff;
+  font-family:'Inter',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;
+  transition:transform .2s,box-shadow .2s;margin-top:4px;
+}
+.lg-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(139,26,26,.3);}
+
+.lg-forgot{display:block;text-align:center;margin-top:14px;font-size:.8rem;color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s;}
+.lg-forgot:hover{color:rgba(255,255,255,.6);}
+.lg-notice{text-align:center;margin-top:20px;font-size:.72rem;color:rgba(255,255,255,.2);line-height:1.5;border-top:1px solid rgba(255,255,255,.05);padding-top:16px;}
+
+/* ---------- PROFILE DASHBOARD ---------- */
+.lg-profile{
+  position:relative;z-index:2;width:100%;max-width:680px;
+  opacity:0;transform:translateY(20px);
+  transition:opacity .6s ease,transform .6s ease;
+}
+.lg-profile.show{opacity:1;transform:translateY(0);}
+
+.lg-profile-bar{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  border-radius:14px 14px 0 0;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;
+}
+.lg-profile-dots{display:flex;gap:5px;}
+.lg-profile-dots span{width:10px;height:10px;border-radius:50%;}
+.lg-d-red{background:#ff5f56;}.lg-d-yellow{background:#ffbd2e;}.lg-d-green{background:#27c93f;}
+.lg-profile-title{font-family:'Space Grotesk',monospace;font-size:.72rem;color:rgba(255,255,255,.4);letter-spacing:1px;}
+.lg-profile-live{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:.65rem;color:#ff5f56;letter-spacing:1px;text-transform:uppercase;font-weight:600;}
+.lg-pulse{width:7px;height:7px;border-radius:50%;background:#ff5f56;animation:lgPulse 1.5s ease infinite;}
+@keyframes lgPulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(1.4);}}
+
+.lg-profile-body{
+  background:rgba(10,10,10,.95);border:1px solid rgba(255,255,255,.06);
+  border-top:none;border-radius:0 0 14px 14px;padding:28px 24px;
+}
+
+/* Header row */
+.lg-p-header{display:flex;align-items:center;gap:20px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.06);}
+.lg-avatar{
+  width:64px;height:64px;border-radius:50%;
+  background:linear-gradient(135deg,#8B1A1A,#5C0E0E);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:700;color:#fff;
+  flex-shrink:0;
+}
+.lg-p-name{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;color:#fff;font-weight:600;}
+.lg-p-id{font-size:.75rem;color:rgba(255,255,255,.35);margin-top:2px;font-family:'Space Grotesk',monospace;}
+.lg-p-status{
+  margin-left:auto;padding:5px 14px;border-radius:20px;font-size:.68rem;
+  letter-spacing:1.5px;text-transform:uppercase;font-weight:600;
+}
+.lg-status-good{background:rgba(39,201,63,.12);color:#27c93f;border:1px solid rgba(39,201,63,.2);}
+.lg-status-warn{background:rgba(255,189,46,.12);color:#ffbd2e;border:1px solid rgba(255,189,46,.2);}
+
+/* Stats grid */
+.lg-p-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px;}
+.lg-p-metric{
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);
+  border-radius:10px;padding:16px 14px;text-align:center;
+}
+.lg-p-value{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:700;color:#fff;}
+.lg-p-value.green{color:#27c93f;}
+.lg-p-value.red{color:#ff5f56;}
+.lg-p-value.gold{color:#c9a96e;}
+.lg-p-label{font-size:.65rem;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:1px;margin-top:4px;}
+
+/* Activity log */
+.lg-p-log-title{font-size:.68rem;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;font-weight:600;}
+.lg-p-log{display:flex;flex-direction:column;gap:5px;margin-bottom:24px;}
+.lg-p-log-item{
+  font-size:.78rem;color:rgba(255,255,255,.5);padding:7px 12px;
+  border-radius:6px;background:rgba(255,255,255,.02);
+  display:flex;gap:10px;align-items:flex-start;
+}
+.lg-p-log-time{color:#8B1A1A;font-family:'Space Grotesk',monospace;font-weight:600;flex-shrink:0;}
+
+/* Bottom warning */
+.lg-p-warning{
+  text-align:center;padding:16px;border-radius:10px;
+  background:rgba(139,26,26,.08);border:1px solid rgba(139,26,26,.15);
+  font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.5;
+}
+.lg-p-warning strong{color:#8B1A1A;}
+
+/* Logout */
+.lg-logout{
+  display:block;text-align:center;margin-top:20px;font-size:.78rem;
+  color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s;
+  cursor:pointer;background:none;border:none;font-family:'Inter',sans-serif;
+}
+.lg-logout:hover{color:rgba(255,255,255,.6);}
+
+/* ---------- BIG BROTHER LINE ---------- */
+.lg-bb{
+  position:relative;z-index:2;text-align:center;margin-top:40px;
+  font-family:'Space Grotesk',sans-serif;font-size:.72rem;
+  letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.12);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:600px){
+  .lg-p-grid{grid-template-columns:1fr;}
+  .lg-p-header{flex-direction:column;text-align:center;}
+  .lg-p-status{margin-left:0;margin-top:8px;}
+}

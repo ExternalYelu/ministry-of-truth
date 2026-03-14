@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Posters Gallery — Ministry of Truth</title>
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/posters.css?v=1">
 </head>
 <body>
 
@@ -28,132 +29,221 @@
     </div>
   </nav>
 
-  <section class="page-header">
-    <div class="container">
+  <!-- ============ HERO ============ -->
+  <section class="po-hero">
+    <canvas id="poCanvas"></canvas>
+    <div class="po-hero-inner">
       <div class="hero-badge">Visual Communications</div>
-      <h1>Posters Gallery</h1>
-      <p>Official Ministry propaganda materials for download and display.</p>
+      <h1>Propaganda Posters Gallery</h1>
+      <p class="po-hero-sub">Official Ministry materials for public display, civic education, and personal inspiration. Download, share, and display with pride.</p>
     </div>
   </section>
 
-  <section class="section">
+  <!-- ============ STATS BAR ============ -->
+  <section class="po-stats">
+    <div class="po-stats-inner">
+      <div class="po-stat">
+        <span class="po-stat-num" data-count="9">0</span>
+        <span class="po-stat-label">Active Posters</span>
+      </div>
+      <div class="po-stat">
+        <span class="po-stat-num" data-count="847" data-suffix="K">0</span>
+        <span class="po-stat-label">Distributed This Quarter</span>
+      </div>
+      <div class="po-stat">
+        <span class="po-stat-num" data-count="100" data-suffix="%">0</span>
+        <span class="po-stat-label">Display Compliance</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POSTER GRID ============ -->
+  <section class="po-section">
     <div class="container">
-      <div class="poster-grid fade-in">
-        <div class="poster-card">
-          <div class="poster-image p1">
-            <div class="poster-emblem">
-              <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="30" cy="30" r="24"/><circle cx="30" cy="30" r="12"/><circle cx="30" cy="30" r="4" fill="currentColor"/><line x1="30" y1="6" x2="30" y2="18"/><line x1="30" y1="42" x2="30" y2="54"/><line x1="6" y1="30" x2="18" y2="30"/><line x1="42" y1="30" x2="54" y2="30"/></svg>
+      <div class="po-section-head fade-in">
+        <span class="po-section-tag">Official Materials</span>
+        <h2>Approved for Public Display</h2>
+        <div class="po-head-line"></div>
+        <p class="po-section-desc">Each poster has been reviewed and certified by the Department of Visual Communications. Unauthorized modification is a Category 2 offense.</p>
+      </div>
+
+      <div class="po-grid">
+        <!-- Poster 1 -->
+        <div class="po-card fade-in">
+          <div class="po-art po-art-1">
+            <div class="po-icon">
+              <svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="36" cy="36" r="28"/><circle cx="36" cy="36" r="16"/><circle cx="36" cy="36" r="5" fill="currentColor"/><line x1="36" y1="8" x2="36" y2="20"/><line x1="36" y1="52" x2="36" y2="64"/><line x1="8" y1="36" x2="20" y2="36"/><line x1="52" y1="36" x2="64" y2="36"/></svg>
             </div>
-            <div class="poster-text">Big Brother Is Watching You</div>
-            <div class="poster-sub">Your Safety Is Our Priority</div>
-            <div class="poster-overlay">
-              <a href="#" class="btn btn-outline">Share</a>
+            <div class="po-slogan">Big Brother Is Watching You</div>
+            <div class="po-sub">Your Safety Is Our Priority</div>
+            <div class="po-overlay">
+              <button class="po-overlay-btn po-dl-btn">Download</button>
+              <button class="po-overlay-btn po-share-btn">Share</button>
             </div>
           </div>
-          <div class="poster-actions">
-            <span class="poster-title">Surveillance Awareness</span>
-            <a href="#" class="btn btn-outline btn-sm">Download</a>
-          </div>
+          <div class="po-info"><div><div class="po-title">Surveillance Awareness</div><div class="po-cat">Core Messaging</div></div></div>
         </div>
 
-        <div class="poster-card">
-          <div class="poster-image p2">
-            <div class="poster-emblem">
-              <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="30,6 54,48 6,48"/><line x1="30" y1="22" x2="30" y2="36"/><circle cx="30" cy="42" r="2" fill="currentColor"/></svg>
+        <!-- Poster 2 -->
+        <div class="po-card fade-in">
+          <div class="po-art po-art-2">
+            <div class="po-icon">
+              <svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="36,8 62,54 10,54"/><line x1="36" y1="26" x2="36" y2="40"/><circle cx="36" cy="47" r="2.5" fill="currentColor"/></svg>
             </div>
-            <div class="poster-text">Report Thoughtcrime</div>
-            <div class="poster-sub">Silence Protects the Enemy</div>
-            <div class="poster-overlay">
-              <a href="#" class="btn btn-outline">Share</a>
+            <div class="po-slogan">Report Thoughtcrime</div>
+            <div class="po-sub">Silence Protects the Enemy</div>
+            <div class="po-overlay">
+              <button class="po-overlay-btn po-dl-btn">Download</button>
+              <button class="po-overlay-btn po-share-btn">Share</button>
             </div>
           </div>
-          <div class="poster-actions">
-            <span class="poster-title">Citizen Vigilance</span>
-            <a href="#" class="btn btn-outline btn-sm">Download</a>
-          </div>
+          <div class="po-info"><div><div class="po-title">Citizen Vigilance</div><div class="po-cat">Public Safety</div></div></div>
         </div>
 
-        <div class="poster-card">
-          <div class="poster-image p3">
-            <div class="poster-emblem">
-              <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="10" y="10" width="40" height="40" rx="4"/><path d="M20 25l6 6 14-14"/></svg>
+        <!-- Poster 3 -->
+        <div class="po-card fade-in">
+          <div class="po-art po-art-3">
+            <div class="po-icon">
+              <svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="14" y="14" width="44" height="44" rx="6"/><path d="M26 35l7 7 14-14"/></svg>
             </div>
-            <div class="poster-text">Compliance Is Contentment</div>
-            <div class="poster-sub">Align. Trust. Prosper.</div>
-            <div class="poster-overlay">
-              <a href="#" class="btn btn-outline">Share</a>
+            <div class="po-slogan">Compliance Is Contentment</div>
+            <div class="po-sub">Align. Trust. Prosper.</div>
+            <div class="po-overlay">
+              <button class="po-overlay-btn po-dl-btn">Download</button>
+              <button class="po-overlay-btn po-share-btn">Share</button>
             </div>
           </div>
-          <div class="poster-actions">
-            <span class="poster-title">Civic Duty</span>
-            <a href="#" class="btn btn-outline btn-sm">Download</a>
-          </div>
+          <div class="po-info"><div><div class="po-title">Civic Duty</div><div class="po-cat">Behavioral Guidance</div></div></div>
         </div>
 
-        <div class="poster-card">
-          <div class="poster-image p4">
-            <div class="poster-emblem">
-              <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="30" cy="30" r="20"/><path d="M22 30h16M30 22v16"/></svg>
+        <!-- Poster 4 -->
+        <div class="po-card fade-in">
+          <div class="po-art po-art-4">
+            <div class="po-icon">
+              <svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="36" cy="36" r="26"/><path d="M26 36h20M36 26v20"/></svg>
             </div>
-            <div class="poster-text">Unity Through Accuracy</div>
-            <div class="poster-sub">One Truth. One People.</div>
-            <div class="poster-overlay">
-              <a href="#" class="btn btn-outline">Share</a>
+            <div class="po-slogan">Unity Through Accuracy</div>
+            <div class="po-sub">One Truth. One People.</div>
+            <div class="po-overlay">
+              <button class="po-overlay-btn po-dl-btn">Download</button>
+              <button class="po-overlay-btn po-share-btn">Share</button>
             </div>
           </div>
-          <div class="poster-actions">
-            <span class="poster-title">National Unity</span>
-            <a href="#" class="btn btn-outline btn-sm">Download</a>
-          </div>
+          <div class="po-info"><div><div class="po-title">National Unity</div><div class="po-cat">Core Messaging</div></div></div>
         </div>
 
-        <div class="poster-card">
-          <div class="poster-image p5">
-            <div class="poster-emblem">
-              <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M30 6v48M10 20h40M10 40h40"/><circle cx="30" cy="30" r="8"/></svg>
+        <!-- Poster 5 -->
+        <div class="po-card fade-in">
+          <div class="po-art po-art-5">
+            <div class="po-icon">
+              <svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M36 10v52M14 26h44M14 46h44"/><circle cx="36" cy="36" r="10"/></svg>
             </div>
-            <div class="poster-text">The Party Remembers For You</div>
-            <div class="poster-sub">So You Don't Have To</div>
-            <div class="poster-overlay">
-              <a href="#" class="btn btn-outline">Share</a>
+            <div class="po-slogan">The Party Remembers for You</div>
+            <div class="po-sub">So You Don't Have To</div>
+            <div class="po-overlay">
+              <button class="po-overlay-btn po-dl-btn">Download</button>
+              <button class="po-overlay-btn po-share-btn">Share</button>
             </div>
           </div>
-          <div class="poster-actions">
-            <span class="poster-title">Memory Services</span>
-            <a href="#" class="btn btn-outline btn-sm">Download</a>
-          </div>
+          <div class="po-info"><div><div class="po-title">Memory Services</div><div class="po-cat">Historical Integrity</div></div></div>
         </div>
 
-        <div class="poster-card">
-          <div class="poster-image p6">
-            <div class="poster-emblem">
-              <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h36v24H12z"/><path d="M18 20V14a12 12 0 0 1 24 0v6"/><circle cx="30" cy="34" r="4" fill="currentColor"/></svg>
+        <!-- Poster 6 -->
+        <div class="po-card fade-in">
+          <div class="po-art po-art-6">
+            <div class="po-icon">
+              <svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 28h40v28H16z"/><path d="M24 28V20a12 12 0 0124 0v8"/><circle cx="36" cy="44" r="5" fill="currentColor"/></svg>
             </div>
-            <div class="poster-text">Freedom Is Slavery</div>
-            <div class="poster-sub">Liberation Through Obedience</div>
-            <div class="poster-overlay">
-              <a href="#" class="btn btn-outline">Share</a>
+            <div class="po-slogan">Freedom Is Slavery</div>
+            <div class="po-sub">Liberation Through Obedience</div>
+            <div class="po-overlay">
+              <button class="po-overlay-btn po-dl-btn">Download</button>
+              <button class="po-overlay-btn po-share-btn">Share</button>
             </div>
           </div>
-          <div class="poster-actions">
-            <span class="poster-title">Core Doctrine</span>
-            <a href="#" class="btn btn-outline btn-sm">Download</a>
+          <div class="po-info"><div><div class="po-title">Core Doctrine</div><div class="po-cat">Party Slogans</div></div></div>
+        </div>
+
+        <!-- Poster 7 -->
+        <div class="po-card fade-in">
+          <div class="po-art po-art-7">
+            <div class="po-icon">
+              <svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M36 10l-22 52h44z"/><circle cx="36" cy="42" r="8" fill="none"/><circle cx="36" cy="42" r="3" fill="currentColor"/></svg>
+            </div>
+            <div class="po-slogan">Ignorance Is Strength</div>
+            <div class="po-sub">Know Less. Understand More.</div>
+            <div class="po-overlay">
+              <button class="po-overlay-btn po-dl-btn">Download</button>
+              <button class="po-overlay-btn po-share-btn">Share</button>
+            </div>
           </div>
+          <div class="po-info"><div><div class="po-title">Core Doctrine</div><div class="po-cat">Party Slogans</div></div></div>
+        </div>
+
+        <!-- Poster 8 -->
+        <div class="po-card fade-in">
+          <div class="po-art po-art-8">
+            <div class="po-icon">
+              <svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M36 10c-12 0-24 16-24 16s12 16 24 16 24-16 24-16-12-16-24-16z"/><circle cx="36" cy="26" r="8"/><path d="M20 48h32M24 56h24"/></svg>
+            </div>
+            <div class="po-slogan">Your Thoughts Are Not Private</div>
+            <div class="po-sub">Transparency Begins Within</div>
+            <div class="po-overlay">
+              <button class="po-overlay-btn po-dl-btn">Download</button>
+              <button class="po-overlay-btn po-share-btn">Share</button>
+            </div>
+          </div>
+          <div class="po-info"><div><div class="po-title">Thought Awareness</div><div class="po-cat">Surveillance</div></div></div>
+        </div>
+
+        <!-- Poster 9 -->
+        <div class="po-card fade-in">
+          <div class="po-art po-art-9">
+            <div class="po-icon">
+              <svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M36 62l-22-14V24L36 10l22 14v24z"/><circle cx="36" cy="36" r="10"/><circle cx="36" cy="36" r="4" fill="currentColor"/></svg>
+            </div>
+            <div class="po-slogan">War Is Peace</div>
+            <div class="po-sub">Strength Through Perpetual Vigilance</div>
+            <div class="po-overlay">
+              <button class="po-overlay-btn po-dl-btn">Download</button>
+              <button class="po-overlay-btn po-share-btn">Share</button>
+            </div>
+          </div>
+          <div class="po-info"><div><div class="po-title">Core Doctrine</div><div class="po-cat">Party Slogans</div></div></div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ============ NOTICE ============ -->
+  <section class="po-section po-section-alt">
+    <div class="container">
+      <div class="po-notice fade-in">
+        <div class="po-notice-icon">
+          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="#8B1A1A" stroke-width="2"/><line x1="24" y1="14" x2="24" y2="26" stroke="#8B1A1A" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="33" r="2" fill="#8B1A1A"/></svg>
+        </div>
+        <h3>Display Compliance Reminder</h3>
+        <p>All citizens are required to display a minimum of one approved poster in their residential unit by the end of each fiscal quarter. Poster rotation schedules are available from your sector's Cultural Alignment Officer. Failure to display approved materials may result in a compliance review.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="po-cta">
+    <h2>Visual Unity Strengthens Oceania</h2>
+    <p>For custom poster requests or bulk distribution orders, contact the Department of Visual Communications.</p>
+    <div class="po-cta-btns">
+      <a href="slogans.html" class="btn-po-primary">View Slogans</a>
+      <a href="resources.html" class="btn-po-secondary">Citizen Resources</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Ministry of Truth</div>
-          <p>Safeguarding informational integrity since 1984.</p>
-        </div>
-        <div><h4>Navigation</h4><ul><li><a href="about.html">About Us</a></li><li><a href="accuracy.html">Our Commitment</a></li><li><a href="resources.html">Citizen Resources</a></li><li><a href="careers.html">Careers</a></li></ul></div>
-        <div><h4>Information</h4><ul><li><a href="newsroom.html">Newsroom</a></li><li><a href="fcq.html">Corrected Questions</a></li><li><a href="slogans.html">Updated Slogans</a></li><li><a href="posters.html">Posters Gallery</a></li></ul></div>
-        <div><h4>Legal</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Perception</a></li><li><a href="#">Data Transparency</a></li><li><a href="#">Report Thoughtcrime</a></li></ul></div>
+      <div class="footer-brand" style="text-align:center;padding:32px 0 12px;">
+        <div class="logo" style="justify-content:center;margin-bottom:8px;"><div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Ministry of Truth</div>
+        <p style="color:#888;font-size:0.85rem;">Safeguarding informational integrity since 1984.</p>
       </div>
       <div class="footer-bottom">
         <span>Reality subject to revision. &copy; 2026 Ministry of Truth, Oceania. <span class="footer-admin-trigger" title="Manager Access" onclick="document.dispatchEvent(new KeyboardEvent('keydown',{key:'M',ctrlKey:true,shiftKey:true}))">&#9881;</span></span>
@@ -164,7 +254,8 @@
 
   <div class="sync-popup"><span class="sync-dot"></span>Your session has been synchronized.<button class="sync-close">&times;</button></div>
 
-  <script src="js/main.js?v=6"></script>
+  <script src="js/main.js?v=8"></script>
   <script src="js/admin.js?v=4"></script>
+  <script src="js/posters.js?v=1"></script>
 </body>
 </html>

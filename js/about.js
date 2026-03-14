@@ -3,6 +3,14 @@
    Canvas animation + counter/bar animations
    ============================================= */
 
+/* Clear stale admin edits for about page (structure changed v2) */
+(function(){
+  try {
+    var s = JSON.parse(localStorage.getItem('minitrue_edits'));
+    if (s && s['about.html']) { delete s['about.html']; localStorage.setItem('minitrue_edits', JSON.stringify(s)); location.reload(); }
+  } catch(e){}
+})();
+
 (function () {
   'use strict';
 

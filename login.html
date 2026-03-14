@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Citizen Login — Ministry of Truth</title>
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/login.css?v=1">
 </head>
 <body>
 
@@ -28,40 +29,49 @@
     </div>
   </nav>
 
-  <section class="login-page">
-    <div class="login-card">
-      <div class="logo-icon" style="width:44px;height:44px;margin:0 auto 16px;">
-        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+  <section class="lg-page">
+    <canvas id="lgCanvas"></canvas>
+
+    <!-- Login Card -->
+    <div class="lg-card" id="lgCard">
+      <div class="lg-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
       </div>
       <h2>Citizen Portal</h2>
-      <p class="login-sub">Access your Ministry account</p>
-      <form onsubmit="event.preventDefault();">
-        <div class="form-group">
-          <label for="citizen-id">Citizen ID</label>
-          <input type="text" id="citizen-id" placeholder="e.g., 7749-A-0012" autocomplete="off">
+      <p class="lg-sub">Access your Ministry account</p>
+      <form id="lgForm">
+        <div class="lg-field">
+          <label for="lgCitizenId">Citizen ID</label>
+          <input type="text" id="lgCitizenId" placeholder="e.g., 7749-A-0012" autocomplete="off">
         </div>
-        <div class="form-group">
-          <label for="access-key">Access Key</label>
-          <input type="password" id="access-key" placeholder="Enter your access key">
+        <div class="lg-field">
+          <label for="lgAccessKey">Access Key</label>
+          <input type="password" id="lgAccessKey" placeholder="Enter your access key">
         </div>
-        <button type="submit" class="btn btn-primary" style="width:100%;margin-top:4px;">Authenticate</button>
-        <a href="#" class="forgot-link">Forgot Memory?</a>
+        <button type="submit" class="lg-btn">Authenticate</button>
+        <a href="#" class="lg-forgot" id="lgForgot">Forgot Memory?</a>
       </form>
-      <p class="login-notice">Unauthorized access attempts are monitored and recorded.</p>
+      <p class="lg-notice">Unauthorized access attempts are monitored and recorded by the Department of Internal Surveillance. All sessions are logged.</p>
     </div>
+
+    <!-- Profile Dashboard (hidden until login) -->
+    <div class="lg-profile" id="lgProfile"></div>
+
+    <div class="lg-bb" id="lgBB" style="opacity:0;transition:opacity .6s;">BIG BROTHER IS WATCHING YOU</div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer" style="background:transparent;border-top:1px solid rgba(255,255,255,.05);">
     <div class="container">
       <div class="footer-bottom" style="border-top:none;padding-top:0;">
-        <span>Reality subject to revision. &copy; 2026 Ministry of Truth, Oceania. <span class="footer-admin-trigger" title="Manager Access" onclick="document.dispatchEvent(new KeyboardEvent('keydown',{key:'M',ctrlKey:true,shiftKey:true}))">&#9881;</span></span>
+        <span style="color:rgba(255,255,255,.2);">Reality subject to revision. &copy; 2026 Ministry of Truth, Oceania. <span class="footer-admin-trigger" title="Manager Access" onclick="document.dispatchEvent(new KeyboardEvent('keydown',{key:'M',ctrlKey:true,shiftKey:true}))">&#9881;</span></span>
       </div>
     </div>
   </footer>
 
   <div class="sync-popup"><span class="sync-dot"></span>Your session has been synchronized.<button class="sync-close">&times;</button></div>
 
-  <script src="js/main.js?v=6"></script>
+  <script src="js/main.js?v=8"></script>
   <script src="js/admin.js?v=4"></script>
+  <script src="js/login.js?v=1"></script>
 </body>
 </html>

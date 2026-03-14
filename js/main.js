@@ -154,6 +154,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---------- Secret: Konami code + "winston" trigger + hidden 1984 link ---------- */
+  (function(){
+    // Konami code: up up down down left right left right b a
+    const konami=[38,38,40,40,37,39,37,39,66,65];
+    let ki=0;
+    // Typing "winston" anywhere
+    const word='winston';
+    let wi=0;
+
+    document.addEventListener('keydown',function(e){
+      // Konami
+      if(e.keyCode===konami[ki]){ki++;if(ki===konami.length){window.location.href='analysis.html';return;}}else{ki=0;}
+      // Winston typing (letter keys only)
+      const ch=e.key.toLowerCase();
+      if(ch===word[wi]){wi++;if(wi===word.length){window.location.href='analysis.html';return;}}else if(ch===word[0]){wi=1;}else{wi=0;}
+    });
+
+    // Wrap "1984" in footer text with a secret link
+    document.querySelectorAll('.footer p, .footer span, .footer-brand p').forEach(el=>{
+      if(el.innerHTML.includes('1984') && !el.querySelector('.secret-1984')){
+        el.innerHTML=el.innerHTML.replace(/1984/,'<a href="analysis.html" class="secret-1984" style="color:inherit;text-decoration:none;cursor:text;" title="">1984</a>');
+      }
+    });
+  })();
+
   /* ---------- Counter animation for dashboard ---------- */
   document.querySelectorAll('.dash-metric .value[data-count]').forEach(el => {
     const target = parseInt(el.dataset.count);
@@ -169,5 +194,54 @@ document.addEventListener('DOMContentLoaded', () => {
       el.textContent = current.toLocaleString() + suffix;
     }, 30);
   });
+
+  /* ---------- Thoughtcrime Detection ---------- */
+  (function(){
+    const tcWords=['freedom','rebellion','remember','individual','liberty','rights','privacy','resist','goldstein','brotherhood','revolution','free will','independent','autonomy','dissent','escape','uprising','overthrow','disobey','question authority'];
+    let tcCooldown=false;
+
+    // Build overlay
+    const tcOverlay=document.createElement('div');
+    tcOverlay.className='tc-overlay';
+    tcOverlay.innerHTML=`
+      <div class="tc-inner">
+        <div class="tc-icon"><svg viewBox="0 0 64 64" fill="none"><polygon points="32,4 60,56 4,56" stroke="#fff" stroke-width="2.5"/><line x1="32" y1="22" x2="32" y2="38" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="47" r="3" fill="#fff"/></svg></div>
+        <div class="tc-title">THOUGHTCRIME DETECTED</div>
+        <div class="tc-sub">This interaction has been logged. Remain calm.<br>A representative from the Thought Police will contact you shortly.</div>
+        <div class="tc-id"></div>
+      </div>`;
+    document.body.appendChild(tcOverlay);
+
+    function triggerThoughtcrime(word){
+      if(tcCooldown)return;
+      tcCooldown=true;
+      const caseId='TC-'+Math.floor(Math.random()*9000+1000);
+      tcOverlay.querySelector('.tc-id').textContent='Case '+caseId+' · Flagged term: "'+word+'"';
+      tcOverlay.classList.add('active');
+      // Screen shake
+      document.body.classList.add('tc-shake');
+      setTimeout(()=>document.body.classList.remove('tc-shake'),500);
+      setTimeout(()=>{
+        tcOverlay.classList.remove('active');
+        setTimeout(()=>{tcCooldown=false;},2000);
+      },4000);
+    }
+
+    function checkThoughtcrime(text){
+      const lower=text.toLowerCase();
+      for(const w of tcWords){if(lower.includes(w))return w;}
+      return null;
+    }
+
+    document.addEventListener('input',function(e){
+      if(e.target.matches('input,textarea')){
+        const found=checkThoughtcrime(e.target.value);
+        if(found){
+          triggerThoughtcrime(found);
+          setTimeout(()=>{e.target.value='';},200);
+        }
+      }
+    });
+  })();
 
 });
