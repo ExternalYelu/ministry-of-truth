@@ -3,12 +3,16 @@
    Canvas animation + counter/bar animations
    ============================================= */
 
-/* Clear stale admin edits for about page (structure changed v2) */
+/* One-time cleanup of stale admin edits after structure change */
 (function(){
+  var flag = 'minitrue_about_v2';
+  if (localStorage.getItem(flag)) return;
   try {
     var s = JSON.parse(localStorage.getItem('minitrue_edits'));
-    if (s && s['about.html']) { delete s['about.html']; localStorage.setItem('minitrue_edits', JSON.stringify(s)); location.reload(); }
+    if (s && s['about.html']) { delete s['about.html']; localStorage.setItem('minitrue_edits', JSON.stringify(s)); }
   } catch(e){}
+  localStorage.setItem(flag, '1');
+  location.reload();
 })();
 
 (function () {
