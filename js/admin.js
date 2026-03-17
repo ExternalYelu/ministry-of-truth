@@ -84,6 +84,7 @@
     localStorage.removeItem(ADMIN_KEY);
     document.body.classList.remove('admin-mode');
     document.querySelectorAll('[contenteditable]').forEach(function(el) {
+      if (el.closest('.nr-article-overlay')) return;
       el.removeAttribute('contenteditable');
     });
     hideToolbar();
