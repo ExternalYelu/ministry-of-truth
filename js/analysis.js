@@ -181,7 +181,7 @@
   const saveBtn = document.getElementById('anEditSave');
   const resetBtn = document.getElementById('anEditReset');
 
-  const EDIT_PASSWORD = 'doublethink';
+  const EDIT_PASSWORD = 'Syme';
 
   toggleBtn.addEventListener('click', () => {
     if(editMode){ disableEdit(); return; }

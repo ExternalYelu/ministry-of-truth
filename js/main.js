@@ -154,13 +154,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- Secret: Konami code + "winston" trigger + hidden 1984 link ---------- */
+  /* ---------- Secret: Konami code + "syme" trigger + hidden 1984 link ---------- */
   (function(){
     // Konami code: up up down down left right left right b a
     const konami=[38,38,40,40,37,39,37,39,66,65];
     let ki=0;
-    // Typing "winston" anywhere
-    const word='winston';
+    // Typing "syme" anywhere
+    const word='syme';
     let wi=0;
 
     document.addEventListener('keydown',function(e){
