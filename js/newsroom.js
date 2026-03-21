@@ -344,11 +344,6 @@
 
     const classLabel = a.classification === 'public' ? 'Public Distribution' : 'Internal — Authorized Personnel Only';
     const classClass = a.classification === 'public' ? 'nr-class-public' : 'nr-class-internal';
-    const isAdmin = document.body.classList.contains('admin-mode');
-
-    // Check for saved full-article edits
-    const savedEdits = JSON.parse(localStorage.getItem('minitrue_article_edits') || '{}');
-    const savedContent = savedEdits[id] || null;
 
     contentEl.innerHTML = `
       <div class="nr-article-header">
@@ -360,18 +355,16 @@
           </div>
         </div>
         <span class="nr-article-classification ${classClass}">${classLabel}</span>
-        <h1 ${isAdmin ? 'contenteditable="true"' : ''}>${a.title}</h1>
+        <h1>${a.title}</h1>
         <div class="nr-article-meta">
           <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> ${a.date}</span>
           <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> ${a.author}</span>
           <span style="font-family:monospace;font-size:0.72rem;color:#bbb;">${a.ref}</span>
         </div>
       </div>
-      ${isAdmin ? '<div class="nr-edit-banner" style="background:rgba(139,26,26,0.08);border:2px dashed rgba(139,26,26,0.3);border-radius:8px;padding:12px 20px;margin-bottom:16px;text-align:center;font-size:0.85rem;color:#8B1A1A;font-weight:600;">✎ EDIT MODE — Click any text to edit. Click Save when done.</div>' : ''}
-      <div class="nr-article-body" ${isAdmin ? 'contenteditable="true" style="outline:none;min-height:200px;"' : ''}>
-        ${savedContent ? savedContent : a.body}
+      <div class="nr-article-body">
+        ${a.body}
       </div>
-      ${isAdmin ? '<div class="nr-article-save" style="text-align:center;padding:20px 0 8px;display:flex;justify-content:center;gap:10px;"><button class="nr-save-btn" style="background:#8B1A1A;color:#fff;border:none;padding:12px 32px;border-radius:6px;cursor:pointer;font-size:0.95rem;font-weight:600;">Save Article</button><button class="nr-reset-btn" style="background:#333;color:#fff;border:none;padding:12px 32px;border-radius:6px;cursor:pointer;font-size:0.95rem;">Reset to Original</button></div>' : ''}
       <div class="nr-article-footer">
         <div class="nr-article-dist">Distribution</div>
         <div class="nr-article-dist-list">${a.distribution}</div>
@@ -388,55 +381,6 @@
 
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
-
-    // Bind save / reset buttons in admin mode
-    if (isAdmin) {
-      const bodyEl = contentEl.querySelector('.nr-article-body');
-      const titleEl = contentEl.querySelector('.nr-article-header h1');
-      const saveBtn = contentEl.querySelector('.nr-save-btn');
-      const resetBtn = contentEl.querySelector('.nr-reset-btn');
-
-      // Force contenteditable with a small delay so admin.js doesn't override
-      setTimeout(() => {
-        if (bodyEl) { bodyEl.setAttribute('contenteditable', 'true'); bodyEl.focus(); }
-        if (titleEl) titleEl.setAttribute('contenteditable', 'true');
-      }, 50);
-
-      if (saveBtn) {
-        saveBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          const edits = JSON.parse(localStorage.getItem('minitrue_article_edits') || '{}');
-          edits[id] = bodyEl.innerHTML;
-          if (titleEl) edits[id + '_title'] = titleEl.textContent;
-          localStorage.setItem('minitrue_article_edits', JSON.stringify(edits));
-          saveBtn.textContent = 'Saved ✓';
-          saveBtn.style.background = '#2a7d2a';
-          setTimeout(() => { saveBtn.textContent = 'Save Article'; saveBtn.style.background = '#8B1A1A'; }, 1500);
-        });
-      }
-      if (resetBtn) {
-        resetBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          const edits = JSON.parse(localStorage.getItem('minitrue_article_edits') || '{}');
-          delete edits[id];
-          delete edits[id + '_title'];
-          localStorage.setItem('minitrue_article_edits', JSON.stringify(edits));
-          bodyEl.innerHTML = a.body;
-          bodyEl.setAttribute('contenteditable', 'true');
-          if (titleEl) { titleEl.textContent = a.title; titleEl.setAttribute('contenteditable', 'true'); }
-          resetBtn.textContent = 'Reset ✓';
-          setTimeout(() => { resetBtn.textContent = 'Reset to Original'; }, 1500);
-        });
-      }
-    }
-
-    // Load saved title if any (works in both admin and non-admin)
-    if (savedEdits[id + '_title']) {
-      const titleEl = contentEl.querySelector('.nr-article-header h1');
-      if (titleEl) titleEl.textContent = savedEdits[id + '_title'];
-    }
   }
 
   function closeArticle() {

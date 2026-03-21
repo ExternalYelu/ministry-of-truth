@@ -3,18 +3,6 @@
    Canvas, counters, accordion, search, filters
    ============================================= */
 
-/* One-time cleanup of stale admin edits after structure change */
-(function(){
-  var flag = 'minitrue_fcq_v2';
-  if (localStorage.getItem(flag)) return;
-  try {
-    var s = JSON.parse(localStorage.getItem('minitrue_edits'));
-    if (s && s['fcq.html']) { delete s['fcq.html']; localStorage.setItem('minitrue_edits', JSON.stringify(s)); }
-  } catch(e){}
-  localStorage.setItem(flag, '1');
-  location.reload();
-})();
-
 (function () {
   'use strict';
 
