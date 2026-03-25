@@ -19,15 +19,13 @@
       title: 'Ministry Announces Record-Setting Accuracy Improvements',
       body: `<p>The Ministry of Truth is pleased to announce that first-quarter correction targets for the year 2026 have been exceeded by a remarkable 14%, with a total of 14,207 archival records successfully realigned to current informational standards. This achievement represents the highest quarterly output in Ministry history and reflects the tireless dedication of our records specialists across all divisions.</p>
 
-<p>Under the direction of the Department of Records, teams in all six sectors of Oceania have worked continuously to identify outdated, inconsistent, or prematurely published data within the national archive system. Each flagged entry underwent the Ministry's rigorous five-step correction protocol, ensuring that all publicly accessible information now reflects the most current and approved version of historical events.</p>
+<p>Under the direction of the Department of Records, teams in all six sectors of Oceania have worked continuously to identify outdated or inconsistent published data within the national archive system. Each flagged entry underwent the Ministry's rigorous five-step correction protocol, ensuring that all publicly accessible information now reflects the most current and approved version of historical events.</p>
 
-<div class="nr-article-quote">"When the past is corrected, the present becomes clearer. When the present is clear, the future is certain."<cite>— The Minister of Truth, Annual Address, 2026</cite></div>
-
-<p>Of particular note is the work carried out by the Sub-Department of Statistical Enhancement, which identified 3,412 numerical inconsistencies across economic reports dating back to the previous fiscal cycle. These figures have been harmonized with current production data, ensuring citizens receive only the most optimistic and accurate picture of Oceania's economic trajectory.</p>
+<p>Notably, some of the most important work was carried out by the Sub-Department of Statistical Enhancement, which identified 3,412 numerical inconsistencies across economic reports dating back to the previous fiscal cycle. These figures have been aligned with current production data, ensuring citizens receive only the most accurate picture of Oceania's economic trajectory.</p>
 
 <div class="nr-article-divider">* * *</div>
 
-<p>Citizens who encounter any remaining inconsistencies in public records, news archives, or personal memory are encouraged to report them through the Ministry's official channels. As always, the Ministry reminds all citizens: accuracy is not merely a standard — it is a moral obligation. The past exists only insofar as it aligns with the present, and the present is defined by those entrusted with its stewardship.</p>
+<p>Citizens who encounter any remaining inconsistencies in public records, news archives, or personal memory are encouraged to report them through the Ministry's official channels. As always, the Ministry reminds all citizens that accuracy is is a moral obligation. </p>
 
 <p>Additional statistical summaries will be distributed to sector administrators by end of quarter. Unauthorized reproduction or discussion of pre-correction data remains a Category B compliance violation.</p>`,
       distribution: 'All Sector Administrators, Department Heads, Public Information Terminals, Telescreen Broadcast Network, Approved Print Media'
