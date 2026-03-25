@@ -25,7 +25,7 @@
 
 <div class="nr-article-divider">* * *</div>
 
-<p>Citizens who encounter any remaining inconsistencies in public records, news archives, or personal memory are encouraged to report them through the Ministry's official channels. As always, the Ministry reminds all citizens that accuracy is is a moral obligation. </p>
+<p>Citizens who encounter any remaining inconsistencies in public records, news archives, or personal memory are encouraged to report them through the Ministry's official channels. As always, the Ministry reminds all citizens that accuracy is a moral obligation. </p>
 
 <p>Additional statistical summaries will be distributed to sector administrators by end of quarter. Unauthorized reproduction or discussion of pre-correction data remains a Category B compliance violation.</p>`,
       distribution: 'All Sector Administrators, Department Heads, Public Information Terminals, Telescreen Broadcast Network, Approved Print Media'
@@ -40,17 +40,13 @@
       author: 'Department of Statistical Enhancement',
       approvedBy: 'Deputy Minister, Division of Numerical Integrity',
       title: 'Correction Initiative Exceeds Annual Targets',
-      body: `<p>The Department of Statistical Enhancement is proud to report that the Annual Data Optimization Initiative has been completed ahead of schedule, with all numerical data across public databases fully harmonized for the new fiscal year. This process, which typically requires 90 days of concentrated effort, was accomplished in just 74 days — a testament to the dedication of our statistical correction teams.</p>
+      body: `<p>The Department of Statistical Enhancement is proud to report that the Annual Data Optimization Initiative has been completed ahead of schedule, with all numerical data across public databases fully aligned for the new fiscal year. This process, which typically requires 90 days of concentrated effort, was accomplished in just 74 days.</p>
 
-<p>The initiative encompassed the review and adjustment of 847,000 individual data points spanning production output reports, citizen satisfaction indices, resource allocation tables, and historical economic records. Each data point was evaluated against current approved benchmarks and, where necessary, refined to ensure full alignment with the Ministry's standards of informational consistency.</p>
+<p>The initiative contained the review and adjustment of 847,000 individual data points spanning production output reports, citizen satisfaction indices, resource tables, and historical economic records. Each data point was evaluated against current approved benchmarks and, where necessary, refined to ensure full alignment with the Ministry's standards of informational consistency.</p>
 
-<div class="nr-article-quote">"Numbers do not lie — provided they have been properly corrected."<cite>— Director of Statistical Enhancement, Internal Memo #4421</cite></div>
+<p>Among the most significant corrections were updates to the chocolate ration records, which had contained formatting errors suggesting a decrease where instead, an increase had, in fact, always been the case. These errors have been fully resolved.</p>
 
-<p>Among the most significant corrections were updates to the chocolate ration records, which had contained legacy formatting errors suggesting a decrease where an increase had, in fact, always been the case. These errors have been fully resolved. Additionally, industrial production figures for Airstrip One have been recalibrated to accurately reflect the 23% increase in output that has always been consistent with our three-year plan projections.</p>
-
-<div class="nr-article-divider">* * *</div>
-
-<p>The Department wishes to remind all sector statisticians that unapproved data sets must be submitted for correction review before any public release. Citizens who believe they have encountered unoptimized numerical data are encouraged to file a discrepancy report through their local Ministry office. Remember: correct data builds a correct society. There are no exceptions to this principle.</p>`,
+<p>The Department wishes to remind all sector statisticians that unapproved data sets must be submitted for correction review before any public release. Citizens who believe they have encountered unoptimized numerical data are encouraged to file a discrepancy report through their local Ministry office.</p>`,
       distribution: 'Department of Statistical Enhancement (All Divisions), Sector Economists, Public Data Terminal Administrators, Ministry Archive System'
     },
 
@@ -63,17 +59,13 @@
       author: 'Department of Public Sentiment',
       approvedBy: 'Minister of Truth',
       title: 'Citizen Confidence Reaches Record High',
-      body: `<p>Annual sentiment analysis conducted by the Department of Public Sentiment has confirmed that public trust in Ministry operations has reached an unprecedented 99.2% approval rating — the highest ever recorded since the Ministry began measuring citizen confidence in its founding year. This figure represents a 0.4% increase from the previous year's already exceptional 98.8% rating.</p>
+      body: `<p>Annual sentiment analysis conducted by the Department of Public Sentiment has confirmed that public trust in Ministry operations has reached an unprecedented 99.7% approval rating. This is the highest ever recorded since the Ministry began measuring citizen confidence in its founding year. This figure represents a 0.9% increase from the previous year's already exceptional 98.8% rating.</p>
 
-<p>The survey, which was administered to a representative sample of 12 million citizens across all sectors of Oceania, utilized the Ministry's proprietary Sentiment Assessment Framework (SAF-7) — a comprehensive evaluation tool that measures trust, alignment, satisfaction, and informational confidence across 14 distinct categories. Participation in the survey is, as always, entirely voluntary and universally expected.</p>
+<p>The survey, which was administered to a representative sample of 12 million citizens across all sectors of Oceania, utilized a comprehensive evaluation tool that measures trust, alignment, satisfaction, and informational confidence across 14 distinct categories. Participation in the survey is, as always, entirely voluntary and universally expected.</p>
 
-<p>The Department notes with satisfaction that the category of "Trust in Official Narratives" scored a perfect 100% for the third consecutive year, while "Willingness to Report Inconsistencies" rose by 2.1 percentage points, indicating a healthy and engaged citizenry committed to the collective pursuit of truth.</p>
+<p>The Department notes with satisfaction that the category of "Trust in Official Narratives" scored a perfect 100% for the third consecutive year. This indicates a healthy and engaged community that is committed to the pursuit of truth.</p>
 
-<div class="nr-article-quote">"The confidence of the people is not given — it is constructed, maintained, and perfected through the daily labor of alignment."<cite>— Department of Public Sentiment, Annual Report, 2025</cite></div>
-
-<div class="nr-article-divider">* * *</div>
-
-<p>The 0.8% of respondents whose answers did not align with standard confidence benchmarks have been referred to their local Cognitive Alignment Centers for complimentary guidance sessions. The Ministry extends its gratitude to all citizens who participated in the survey and reminds the public that confidence in institutions is not merely a feeling — it is a responsibility. Those who do not yet feel confident are encouraged to schedule a voluntary alignment session at their earliest convenience.</p>`,
+<p>The 0.3% of respondents whose answers did not align with standard confidence benchmarks have been referred to their local Cognitive Alignment Centers for complimentary guidance sessions. The Ministry extends its gratitude to all citizens who participated in the survey and reminds the public that confidence in institutions is a responsibility. </p>`,
       distribution: 'All Citizens (General Distribution), Telescreen Network, Community Notice Boards, Public Information Officers, Youth Loyalty Program Administrators'
     },
 
