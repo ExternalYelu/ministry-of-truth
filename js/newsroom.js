@@ -99,13 +99,11 @@
       author: 'Office of International Informational Standards',
       approvedBy: 'Minister of Truth, in consultation with the Inner Party',
       title: 'Global Alignment Protocol Enters Phase III',
-      body: `<p>The Ministry of Truth announces that the Global Alignment Protocol, Oceania's initiative to synchronize informational standards across all territories, has officially entered Phase III. As of this date, cross-territorial synchronization of approved narratives, historical records, and statistical benchmarks covers 97% of all Oceanian communications networks, up from 89% at the conclusion of Phase II.</p>
+      body: `<p>The Ministry of Truth announces that the Global Alignment Protocol, Oceania's initiative to synchronize informational standards across all territories, has officially entered Phase III. As of this date, cross-territorial synchronization of approved narratives and statistical benchmarks covers 97% of all Oceanian communications networks, up from 89% at the conclusion of Phase II.</p>
 
 <p>Phase III focuses on the integration of the remaining 3% of communications infrastructure, primarily located in recently liberated territories and remote agricultural sectors. Mobile alignment units have been deployed to these areas, equipped with portable correction terminals and condensed versions of the Ministry's approved archive. It is anticipated that full 100% coverage will be achieved within the next two fiscal quarters.</p>
 
-<p>The protocol also introduces enhanced cross-referencing capabilities between the Ministry of Truth and its counterpart agencies in allied territories, ensuring that informational standards remain consistent not only within Oceania but across the broader geopolitical landscape. As the nature of our alliances evolves, so too must the information that reflects them. The Protocol ensures these transitions occur seamlessly and without contradiction.</p>
-
-<p>Citizens in newly integrated territories are encouraged to visit their nearest Ministry Information Center to receive updated reference materials and schedule orientation sessions. The Ministry assures all citizens that the alignment process is designed to be as smooth and painless as possible. Those who experience difficulty adapting to updated informational standards should not hesitate to request cognitive support services, which are available at no cost and with complete confidentiality — as all Ministry services are.</p>`,
+<p>The protocol also introduces enhanced cross-referencing capabilities between the Ministry of Truth and its counterpart agencies in allied territories. This ensures that informational standards remain consistent within both Oceania and across the broader geopolitical landscape.</p>`,
       distribution: 'All Sector Administrators, International Liaison Officers, Territory Integration Teams, Public Information Terminals'
     },
 
