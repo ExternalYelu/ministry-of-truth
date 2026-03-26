@@ -78,17 +78,15 @@
       author: 'Technology Division, Department of Records',
       approvedBy: 'Chief Technology Officer, Ministry of Truth',
       title: 'Predictive Monitoring System Goes Live',
-      body: `<p>The Ministry of Truth is pleased to announce the successful deployment of the Predictive Narrative Alignment System (PNAS), a next-generation AI-driven monitoring infrastructure capable of identifying potential narrative inconsistencies an average of 4.7 hours before they reach public channels. This represents a 340% improvement over the previous reactive correction model.</p>
+      body: `<p>The Ministry of Truth is pleased to announce the successful deployment of the Predictive Narrative Alignment System (PNAS), a next-generation AI-driven monitoring infrastructure capable of identifying potential narrative inconsistencies an average of 4.7 hours before they reach public channels. This represents a 340% improvement over the previous correction model.</p>
 
-<p>Developed over 18 months by the Technology Division in collaboration with the Department of Records, PNAS utilizes advanced natural language processing, behavioral prediction algorithms, and real-time communications monitoring to detect emerging inconsistencies across all forms of public and private discourse. The system processes approximately 2.3 billion linguistic events per day across telescreen transcripts, written correspondence, digital communications, and in-person conversations captured through standard monitoring infrastructure.</p>
-
-<div class="nr-article-quote">"The most effective correction is the one that occurs before the error is spoken."<cite>— Chief Technology Officer, PNAS Launch Address</cite></div>
-
-<p>Early testing has yielded extraordinary results. During the three-month pilot phase, PNAS successfully pre-identified 12,847 potential narrative deviations, of which 99.97% were neutralized before reaching wider circulation. The remaining 0.03% were addressed within minutes through rapid-response correction teams deployed to the source locations.</p>
+<p>This correction model, which was in development for over 18 months, was created by the Technology Division in collaboration with the Department of Records. PNAS utilizes advanced natural language processing and behavioral prediction algorithms to detect emerging inconsistencies across all forms of public and private discourse. The system processes approximately 2.3 billion linguistic events per day across telescreen transcripts, written correspondence, digital communications, and in-person conversations captured through standard monitoring infrastructure.</p>
 
 <div class="nr-article-divider">* * *</div>
 
-<p>The system's deployment represents a significant advancement in the Ministry's capacity to maintain informational integrity in real time. Citizens should be reassured that PNAS operates entirely for their benefit, ensuring that harmful, confusing, or outdated ideas never have the opportunity to cause unnecessary distress. The Technology Division will continue to refine the system's accuracy, with a target of 6.0-hour pre-identification by end of fiscal year. All citizens are reminded that the monitoring infrastructure exists solely for the purpose of protection and should be regarded with gratitude, not apprehension.</p>`,
+<p>Early testing has provided extraordinary results. During the three-month pilot phase, PNAS successfully pre-identified 12,847 potential narrative deviations, of which 99.97% were neutralized before reaching wider circulation. The remaining 0.03% were addressed within minutes through rapid-response correction teams deployed to the source locations.</p>
+
+<p>The system's deployment represents a significant advancement in the Ministry's capacity to maintain informational integrity in real time. Citizens should be reassured that PNAS operates entirely for their benefit, ensuring that harmful, confusing, or outdated ideas never have the opportunity to cause unnecessary distress.</p>`,
       distribution: 'Department Heads (All Divisions), Sector Security Coordinators, Technology Division Staff, Approved Media Liaisons'
     },
 
@@ -101,15 +99,11 @@
       author: 'Office of International Informational Standards',
       approvedBy: 'Minister of Truth, in consultation with the Inner Party',
       title: 'Global Alignment Protocol Enters Phase III',
-      body: `<p>The Ministry of Truth announces that the Global Alignment Protocol (GAP) — Oceania's comprehensive initiative to synchronize informational standards across all territories — has officially entered Phase III. As of this date, cross-territorial synchronization of approved narratives, historical records, and statistical benchmarks covers 97% of all Oceanian communications networks, up from 89% at the conclusion of Phase II.</p>
+      body: `<p>The Ministry of Truth announces that the Global Alignment Protocol, Oceania's initiative to synchronize informational standards across all territories, has officially entered Phase III. As of this date, cross-territorial synchronization of approved narratives, historical records, and statistical benchmarks covers 97% of all Oceanian communications networks, up from 89% at the conclusion of Phase II.</p>
 
 <p>Phase III focuses on the integration of the remaining 3% of communications infrastructure, primarily located in recently liberated territories and remote agricultural sectors. Mobile alignment units have been deployed to these areas, equipped with portable correction terminals and condensed versions of the Ministry's approved archive. It is anticipated that full 100% coverage will be achieved within the next two fiscal quarters.</p>
 
 <p>The protocol also introduces enhanced cross-referencing capabilities between the Ministry of Truth and its counterpart agencies in allied territories, ensuring that informational standards remain consistent not only within Oceania but across the broader geopolitical landscape. As the nature of our alliances evolves, so too must the information that reflects them. The Protocol ensures these transitions occur seamlessly and without contradiction.</p>
-
-<div class="nr-article-quote">"A world aligned in its understanding is a world at peace. Inconsistency between territories is no different from inconsistency within the mind — both must be corrected."<cite>— Office of International Informational Standards, Policy White Paper, 2025</cite></div>
-
-<div class="nr-article-divider">* * *</div>
 
 <p>Citizens in newly integrated territories are encouraged to visit their nearest Ministry Information Center to receive updated reference materials and schedule orientation sessions. The Ministry assures all citizens that the alignment process is designed to be as smooth and painless as possible. Those who experience difficulty adapting to updated informational standards should not hesitate to request cognitive support services, which are available at no cost and with complete confidentiality — as all Ministry services are.</p>`,
       distribution: 'All Sector Administrators, International Liaison Officers, Territory Integration Teams, Public Information Terminals'
@@ -124,17 +118,13 @@
       author: 'Office of the Minister of Truth',
       approvedBy: 'The Inner Party, by unanimous resolution',
       title: 'New Sub-Department of Digital Narrative Established',
-      body: `<p>The Ministry of Truth is pleased to announce the establishment of the Sub-Department of Digital Narrative (SDDN), a dedicated division tasked with monitoring, correcting, and aligning all digital communications across Oceania's expanding electronic infrastructure. The sub-department will operate with an initial staff of 3,400 specialists, making it the largest single expansion of Ministry personnel in the past five years.</p>
+      body: `<p>The Ministry of Truth is pleased to announce the establishment of the Sub-Department of Digital Narrative, a dedicated division tasked with monitoring, correcting, and aligning all digital communications across Oceania's expanding electronic infrastructure. The sub-department will operate with an initial staff of 3,400 specialists, making it the largest single expansion of Ministry personnel in the past five years.</p>
 
-<p>The creation of SDDN responds to the growing volume of digital communications that now account for approximately 64% of all citizen-to-citizen information exchange. While the Ministry's existing monitoring infrastructure has performed admirably, the pace and volume of digital discourse requires a specialized approach — one that can address inconsistencies in real time across messaging platforms, digital notice boards, and personal computing devices.</p>
+<p>The creation of SDDN responds to the growing volume of digital communications that now accounts for approximately 64% of all citizen-to-citizen information exchange. While the Ministry's existing monitoring program has performed admirably, the pace and volume of digital conversations and information requires a more specialized approach. It requires one that can address inconsistencies in rapid time across messaging platforms and personal computing devices.</p>
 
-<p>SDDN personnel will be drawn from the Ministry's most accomplished correction specialists, supplemented by new recruits from the Youth Loyalty Program's Technology Track. Training will encompass advanced narrative analysis, digital forensics, behavioral pattern recognition, and the principles of Newspeak as applied to electronic communication.</p>
+<p>SDDN personnel will be pulled from the Ministry's most accomplished correction specialists, and supplemented by new recruits from the Youth Loyalty Program's Technology Track. Training will contain advanced analysis, digital forensics, and the principles of Newspeak as applied to electronic communication.</p>
 
-<div class="nr-article-quote">"Every keystroke is a thought made visible. Every thought must be correct."<cite>— Founding Charter of the Sub-Department of Digital Narrative</cite></div>
-
-<div class="nr-article-divider">* * *</div>
-
-<p>The Ministry wishes to assure all citizens that the establishment of SDDN is not a response to any increase in digital thoughtcrime — rates of which continue to decline thanks to the effectiveness of existing programs. Rather, it represents the Ministry's commitment to proactive excellence: ensuring that the digital sphere remains as orderly, consistent, and truthful as every other dimension of public life in Oceania. Citizens are encouraged to continue their digital communications without concern. SDDN exists to ensure that such communications remain safe, correct, and free from the burden of unsanctioned ideas.</p>`,
+<p>The Ministry wishes to assure all citizens that the establishment of SDDN is not a response to any increase in digital thoughtcrime, the rates of which continue to decline thanks to the effectiveness of existing programs. The establishment of SDDN represents the Ministry's commitment to proactive excellence. It ensures that the our digital world remains as orderly, consistent, and truthful as every other dimension of public life in Oceania. Citizens are encouraged to continue their digital communications without concern. SDDN exists to ensure that such communications remain safe and free from the burden of unsanctioned ideas.</p>`,
       distribution: 'All Ministry Departments, Sector Personnel Directors, Youth Loyalty Program Administration, Public Information Terminals, Digital Infrastructure Coordinators'
     },
 
@@ -147,17 +137,13 @@
       author: 'Department of Historical Integrity',
       approvedBy: 'Deputy Minister, Archives Division',
       title: 'Complete Digitization of Pre-Revolution Records',
-      body: `<p>The Department of Historical Integrity is proud to announce the completion of a landmark initiative: the full digitization of all pre-Revolution archival materials held within the Ministry's custody. This multi-year project has resulted in the conversion, correction, and secure storage of over 47 million individual documents, photographs, and recorded materials dating from the period before the establishment of Oceania.</p>
+      body: `<p>The Department of Historical Integrity is proud to announce the completion of a landmark of the full digitization of all pre-Revolution archival materials held within the Ministry's custody. This multi-year project has resulted in the correction and secure storage of over 47 million individual documents, photographs, and recorded materials dating from the period before the establishment of Oceania.</p>
 
-<p>The digitization process involved far more than simple conversion. Each document was subjected to the Ministry's comprehensive Historical Accuracy Review, ensuring that all content now reflects the approved and current understanding of pre-Revolution events. Where original documents contained errors, mischaracterizations, or information no longer consistent with established historical fact, corrections were applied with the Ministry's customary precision and care.</p>
+<p>The digitization process involved each document being put through the comprehensive Historical Accuracy Review.  This ensures that all content now reflects the approved and current understanding of pre-Revolution events. Where original documents contained errorsor information no longer consistent with established historical fact, corrections were applied with the Ministry's customary precision and care.</p>
 
-<p>Notably, the project has resolved several longstanding inconsistencies in the pre-Revolution record. Economic data from the capitalist period has been updated to more accurately reflect the conditions that necessitated the Revolution. Biographical records of key historical figures have been refined to align with their current designated status. Cultural artifacts that could cause confusion or nostalgic attachment to obsolete social structures have been annotated with appropriate contextual guidance.</p>
+<p>The project has resolved several longstanding inconsistencies in the pre-Revolution record. Economic data from the capitalist period has been updated to more accurately reflect the conditions that necessitated the Revolution. Cultural artifacts that could cause confusion or nostalgic attachment to obsolete social structures have been aligned with the appropriate content.</p>
 
-<div class="nr-article-quote">"The past is not a fixed landscape. It is a garden that requires constant tending — and the gardener must not hesitate to remove what no longer serves the whole."<cite>— Director, Department of Historical Integrity</cite></div>
-
-<div class="nr-article-divider">* * *</div>
-
-<p>Physical originals of all digitized documents have been transferred to high-security archival facilities, where they will be preserved in climate-controlled conditions accessible only to authorized Ministry personnel with Level 4 clearance or above. Citizens wishing to access pre-Revolution historical materials may submit a Historical Inquiry through the Citizen Resources portal. Please allow 6-8 weeks for processing, as all requests are reviewed for alignment compliance before fulfillment.</p>`,
+<p>Physical originals of all digitized documents have been transferred to high-security archival facilities, where they will be preserved in climate-controlled conditions accessible only to authorized Ministry personnel with Level 4 clearance or above. Citizens wishing to access pre-Revolution historical materials will submit a Historical Inquiry through the Citizen Resources portal. Please allow 6-8 weeks for processing, as all requests are reviewed for alignment compliance before fulfillment.</p>`,
       distribution: 'All Ministry Archives, Department of Historical Integrity Staff, Sector Libraries, Educational Institutions, Public Information Terminals'
     },
 
@@ -170,17 +156,13 @@
       author: 'Youth Programs Division',
       approvedBy: 'Minister of Truth',
       title: 'Youth Loyalty Program Enrollment Surpasses 2 Million',
-      body: `<p>The Ministry of Truth celebrates a significant milestone: enrollment in the Junior Truth Ambassadors program — the Ministry's flagship youth initiative — has surpassed 2 million active participants across all sectors of Oceania. This achievement reflects the growing enthusiasm of Oceania's young citizens for the principles of informational integrity, civic loyalty, and collective alignment.</p>
+      body: `<p>The Ministry of Truth celebrates a significant milestone today. The enrollment in the Junior Truth Ambassadors program, the Ministry's flagship youth initiative, has surpassed 2 million active participants across all sectors of Oceania. This achievement reflects the growing enthusiasm of Oceania's young citizens for the principles of informational integrity and civic loyalty.</p>
 
-<p>The Junior Truth Ambassadors program, established eight years ago, provides young citizens aged 8 to 17 with structured education in the foundations of truth maintenance, basic Newspeak proficiency, and the identification and reporting of informational inconsistencies. Participants progress through three tiers — Observer, Scout, and Cadet — each offering increasingly advanced training in the principles and practices that sustain our society.</p>
+<p>The Junior Truth Ambassadors program, which was established eight years ago, provides young citizens with the ages from 8 to 17 with structured education in the foundations of truth maintenance, basic Newspeak proficiency, and the identification and reporting of informational inconsistencies. Participants progress through three tiers, the Observer, the Scout, and the Cadet, each offering increasingly advanced training in the principles and practices that sustain our society.</p>
 
-<p>Of particular pride is the program's peer reporting initiative, through which young Ambassadors have submitted over 340,000 inconsistency reports in the past year alone. These reports have led to the identification and correction of 12,400 instances of outdated or unsanctioned information circulating within households, educational institutions, and community gathering spaces.</p>
+<p>We wish to express our pride in the program's peer reporting initiative, where young Ambassadors have submitted over 340,000 inconsistency reports in the past year alone. These reports have led to the identification and correction of 12,400 instances of outdated or unsanctioned information circulating within households and community gathering spaces.</p>
 
-<div class="nr-article-quote">"The youth of Oceania do not merely inherit the truth — they actively defend it. Their vigilance is the foundation upon which our collective future is built."<cite>— Minister of Truth, Youth Loyalty Celebration Address, 2024</cite></div>
-
-<div class="nr-article-divider">* * *</div>
-
-<p>Parents and guardians are encouraged to enroll eligible young citizens through the Citizen Resources portal or at their local Ministry Youth Center. Participation is voluntary and universally recommended. The Ministry extends its gratitude to the educators, program coordinators, and family members who have supported this initiative, and reminds all citizens that investment in youth alignment is investment in the permanence of truth itself.</p>`,
+<p>Parents and guardians are encouraged to enroll eligible young citizens through the Citizen Resources portal or at their local Ministry Youth Center. Participation is voluntary and universally recommended. The Ministry extends its gratitude to the educators and family members who have supported this initiative, and reminds all citizens that investment in youth alignment is investment in the permanence of truth.</p>`,
       distribution: 'All Educational Institutions, Youth Program Coordinators, Family and Community Services, Sector Administrators, Public Information Terminals'
     },
 
@@ -193,17 +175,11 @@
       author: 'Archival Security Division',
       approvedBy: 'Deputy Minister, Security Operations',
       title: 'Enhanced Security Protocols for Archival Systems',
-      body: `<p>The Archival Security Division announces the implementation of enhanced security protocols across all Ministry archival systems, effective immediately. These measures are designed to ensure that obsolete, corrected, or reclassified data remains permanently inaccessible to unauthorized personnel, thereby protecting citizens from the potential confusion and distress caused by exposure to outdated information.</p>
+      body: `<p>The Archival Security Division announces the implementation of enhanced security protocols across all Ministry archival systems, effective immediately. These measures are designed to ensure that corrected or reclassified data remains permanently inaccessible to unauthorized personnel, thereby protecting citizens from the potential confusion and distress caused by exposure to outdated information.</p>
 
-<p>The new protocols include three primary enhancements. First, all archival access points now require dual-factor verification, combining biometric identification with real-time clearance validation. Second, a new automated data lifecycle management system ensures that corrected records are permanently overwritten at the binary level, eliminating any possibility of recovery through unauthorized technical means. Third, access logging has been expanded to capture not only who accesses archival data, but the duration, nature, and emotional response indicators of each access session.</p>
+<p>The new protocols include three primary enhancements. First, all archival access points now require dual-factor verification. Second, a new automated data lifecycle management system ensures that corrected records are permanently overwritten at the binary level, eliminating any possibility of recovery through unauthorized technical means. Third, access logging has been expanded to capture who accesses archival data and the duration and emotional response indicators of each access session.</p>
 
-<p>These measures follow a comprehensive security audit that identified 14 potential vulnerability points in the previous archival infrastructure. While no actual security breaches occurred — the Ministry's record of zero unauthorized data retrievals remains intact — the principle of preventive excellence demands that even theoretical vulnerabilities be addressed with the fullest possible response.</p>
-
-<div class="nr-article-quote">"Information that has been corrected ceases to exist. To seek it is to seek nothing. To find it would be to find an error — and errors, by definition, are not truth."<cite>— Archival Security Division, Protocol Implementation Guide, Section 1.1</cite></div>
-
-<div class="nr-article-divider">* * *</div>
-
-<p>All Ministry personnel with archival access are required to complete the updated Security Awareness Module (SAM-3) within 30 days. Personnel who fail to complete the module within this timeframe will have their access privileges suspended pending review. Citizens are reminded that any attempt to access, reconstruct, or discuss corrected information constitutes a violation of the Information Integrity Act and will be addressed accordingly. These measures exist not as restrictions, but as protections — safeguarding the clarity that every citizen of Oceania deserves.</p>`,
+<p>These measures have been put in place due to a comprehensive security audit that identified 14 potential vulnerability points in the previous archival infrastructure. While no actual security breaches occurred, the principle of preventive excellence demands that even theoretical vulnerabilities be addressed with the fullest possible response.</p>`,
       distribution: 'All Ministry Personnel (Mandatory), Sector Security Officers, Archival Staff, Technology Division, Compliance Review Board'
     }
   };
